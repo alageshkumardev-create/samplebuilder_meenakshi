@@ -16,7 +16,7 @@ const Investors = () => {
           <div className="investors-intro">
             <h2>Investor Relations</h2>
             <p>
-              Meenakshi Builders is committed to transparency and building long-term value 
+              Happy Homes is committed to transparency and building long-term value 
               for our investors and stakeholders. We provide comprehensive information about 
               our financial performance, corporate governance, and future growth plans.
             </p>
@@ -76,4 +76,5 @@ const Investors = () => {
 };
 
 export default Investors;
+
 

@@ -1,18 +1,18 @@
 .newsletter-form {
-  background: #f9f9f9;
+  background: rgba(18, 27, 68, 0.04);
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 16px;
   text-align: center;
 }
 
 .newsletter-form h3 {
-  color: #333;
+  color: var(--color-primary);
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
 .newsletter-form > p {
-  color: #666;
+  color: var(--color-muted);
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
 }
@@ -31,15 +31,18 @@
 .newsletter-input-group input {
   flex: 1;
   padding: 0.75rem 1rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
   font-size: 1rem;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background: var(--color-surface);
+  color: var(--color-text);
 }
 
 .newsletter-input-group input:focus {
   outline: none;
-  border-color: #c49b3a;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(212, 162, 73, 0.2);
 }
 
 .newsletter-input-group input.error {
@@ -47,19 +50,22 @@
 }
 
 .newsletter-input-group button {
-  background: #c49b3a;
-  color: #fff;
+  background: var(--color-accent);
+  color: #0b1433;
   border: none;
   padding: 0.75rem 1.5rem;
-  border-radius: 5px;
+  border-radius: 999px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
   white-space: nowrap;
+  box-shadow: 0 12px 26px rgba(13, 21, 51, 0.15);
 }
 
 .newsletter-input-group button:hover:not(:disabled) {
-  background: #a8822f;
+  background: var(--color-accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(13, 21, 51, 0.22);
 }
 
 .newsletter-input-group button:disabled {
@@ -74,7 +80,7 @@
 }
 
 .newsletter-success {
-  color: #28a745;
+  color: #1e7e34;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -82,7 +88,7 @@
   gap: 0.5rem;
   padding: 1rem;
   background: #d4edda;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .newsletter-success span {
@@ -98,4 +104,5 @@
     width: 100%;
   }
 }
+
 

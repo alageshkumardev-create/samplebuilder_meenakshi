@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>Meenakshi Builders</h3>
+            <h3>Happy Homes</h3>
             <p>Best Builders in Madurai Since 1993</p>
             <p>With 32+ years of expertise and 5000+ homes built, we stand as the best builders in Madurai.</p>
           </div>
@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; Meenakshi Builders Pvt Ltd @2024 All Rights Reserved</p>
+          <p>&copy; Happy Homes Pvt Ltd @2024 All Rights Reserved</p>
           <p>Rank you Higher Madurai</p>
         </div>
       </div>

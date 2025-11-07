@@ -17,15 +17,15 @@ const EnquiryForm = ({ title = "Let's Build Your Home — Together", subtitle = 
 
   const projects = [
     { value: '', label: 'Select a Project (Optional)' },
-    { value: 'meenakshi-towers', label: 'Meenakshi Towers' },
-    { value: 'meenakshi-green-valley', label: 'Meenakshi Green Valley' },
-    { value: 'meenakshi-residency', label: 'Meenakshi Residency' },
-    { value: 'meenakshi-elite', label: 'Meenakshi Elite' },
-    { value: 'meenakshi-twin-towers', label: 'Meenakshi Twin Towers' },
-    { value: 'meenakshi-gardens', label: 'Meenakshi Gardens' },
-    { value: 'meenakshi-flora', label: 'Meenakshi Flora' },
-    { value: 'meenakshi-river-view', label: 'Meenakshi River View' },
-    { value: 'meenakshi-heights', label: 'Meenakshi Heights' },
+    { value: 'happy-elite-city', label: 'Happy Elite City' },
+    { value: 'happy-green-valley', label: 'Happy Green Valley' },
+    { value: 'happy-signature-residency', label: 'Happy Signature Residency' },
+    { value: 'happy-elite', label: 'Happy Elite Villas' },
+    { value: 'happy-twin-towers', label: 'Happy Twin Towers' },
+    { value: 'happy-gardens', label: 'Happy Gardens' },
+    { value: 'happy-flora', label: 'Happy Flora' },
+    { value: 'happy-river-view', label: 'Happy River View' },
+    { value: 'happy-heights', label: 'Happy Heights' },
     { value: 'other', label: 'Other' }
   ];
 

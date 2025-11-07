@@ -18,7 +18,7 @@ const OngoingProjects = () => {
   const projects = [
     {
       id: 1,
-      name: 'Meenakshi Elite',
+      name: 'Happy Elite Villas',
       location: 'Surya Nagar, Madurai',
       description: 'Premium apartments with modern amenities in the heart of Surya Nagar.',
       bhk: '2, 3',
@@ -30,7 +30,7 @@ const OngoingProjects = () => {
     },
     {
       id: 2,
-      name: 'Meenakshi Twin Towers',
+      name: 'Happy Twin Towers',
       location: 'Surya Nagar, Madurai',
       description: 'Luxury twin tower apartments with world-class facilities.',
       bhk: '2, 3, 4',
@@ -42,7 +42,7 @@ const OngoingProjects = () => {
     },
     {
       id: 3,
-      name: 'Meenakshi Gardens',
+      name: 'Happy Gardens',
       location: 'Oomachikulam, Madurai',
       description: 'Premium gated community with luxury villas and apartments.',
       bhk: '3, 4',
@@ -54,7 +54,7 @@ const OngoingProjects = () => {
     },
     {
       id: 4,
-      name: 'Meenakshi Towers',
+      name: 'Happy Elite City',
       location: 'Oomachikulam, Madurai',
       description: 'Ultra-Luxury 1, 2 and 3 BHK Apartments with modern amenities.',
       bhk: '1, 2, 3',
@@ -66,7 +66,7 @@ const OngoingProjects = () => {
     },
     {
       id: 5,
-      name: 'Meenakshi Green Valley',
+      name: 'Happy Green Valley',
       location: 'Avaniyapuram, Madurai',
       description: 'Premium villas in a gated community with lush green surroundings.',
       bhk: '3, 4, 5',
@@ -78,7 +78,7 @@ const OngoingProjects = () => {
     },
     {
       id: 6,
-      name: 'Meenakshi Flora',
+      name: 'Happy Flora',
       location: 'Thuvariman, Madurai',
       description: 'Beautiful villas surrounded by nature with modern amenities.',
       bhk: '3, 4',
@@ -90,7 +90,7 @@ const OngoingProjects = () => {
     },
     {
       id: 7,
-      name: 'Meenakshi River View',
+      name: 'Happy River View',
       location: 'Thuvariman, Madurai',
       description: 'Luxury riverfront villas with stunning views and premium finishes.',
       bhk: '4, 5',
@@ -102,7 +102,7 @@ const OngoingProjects = () => {
     },
     {
       id: 8,
-      name: 'Meenakshi Residency',
+      name: 'Happy Signature Residency',
       location: 'Saravanampatti, Coimbatore',
       description: 'Luxury gated community villas in the fast-growing IT hub.',
       bhk: '3, 4',

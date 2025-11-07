@@ -23,7 +23,7 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <Link to="/">Meenakshi Builders</Link>
+          <Link to="/">Happy Homes</Link>
           <span className="tagline">No. 1 Builders in Madurai</span>
         </div>
         

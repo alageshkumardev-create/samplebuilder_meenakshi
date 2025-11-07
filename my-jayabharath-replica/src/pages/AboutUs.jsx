@@ -7,7 +7,7 @@ const AboutUs = () => {
     <div className="about-us-page">
       <div className="page-header">
         <div className="container">
-          <h1>About Meenakshi Builders</h1>
+          <h1>About Happy Homes</h1>
           <p>Best Builders in Madurai Since 1993</p>
         </div>
       </div>
@@ -17,7 +17,7 @@ const AboutUs = () => {
           <div className="about-intro">
             <h2>Our Story</h2>
             <p>
-              Meenakshi Builders has been a trusted name in the real estate industry since 1993. 
+              Happy Homes has been a trusted name in the real estate industry since 1993. 
               With over 32 years of experience, we have successfully built more than 5000 homes 
               across Madurai and Coimbatore, establishing ourselves as the best builders in Madurai.
             </p>
@@ -80,7 +80,7 @@ const AboutUs = () => {
             <div className="links-grid">
               <Link to="/founder" className="link-card">
                 <h3>Founder and MD</h3>
-                <p>Meet the visionary behind Meenakshi Builders</p>
+                <p>Meet the visionary behind Happy Homes</p>
               </Link>
               <Link to="/leadership" className="link-card">
                 <h3>Leadership Team</h3>
@@ -107,4 +107,5 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+
 

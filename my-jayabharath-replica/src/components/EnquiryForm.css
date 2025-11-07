@@ -23,16 +23,17 @@
 }
 
 .enquiry-form-container {
-  background: #fff;
-  border-radius: 10px;
+  background: var(--color-surface);
+  border-radius: 16px;
   padding: 2rem;
   max-width: 600px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 32px 60px rgba(9, 14, 36, 0.4);
   animation: slideUp 0.3s;
+  border: 1px solid rgba(18, 27, 68, 0.15);
 }
 
 @keyframes slideUp {
@@ -54,7 +55,7 @@
   border: none;
   font-size: 2rem;
   cursor: pointer;
-  color: #666;
+  color: var(--color-muted);
   line-height: 1;
   padding: 0;
   width: 30px;
@@ -67,9 +68,9 @@
 }
 
 .close-btn:hover {
-  color: #c49b3a;
+  color: var(--color-accent);
   transform: rotate(90deg);
-  background: #f5f5f5;
+  background: rgba(18, 27, 68, 0.06);
 }
 
 .enquiry-form-header {
@@ -79,14 +80,14 @@
 }
 
 .enquiry-form-header h2 {
-  color: #c49b3a;
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  font-size: 1.6rem;
 }
 
 .enquiry-form-header p {
-  color: #666;
-  font-size: 0.9rem;
+  color: var(--color-muted);
+  font-size: 0.95rem;
 }
 
 .enquiry-form {
@@ -109,8 +110,8 @@
 
 .form-group label {
   margin-bottom: 0.5rem;
-  color: #333;
-  font-weight: 500;
+  color: var(--color-primary);
+  font-weight: 600;
   font-size: 0.95rem;
 }
 
@@ -118,20 +119,21 @@
 .form-group textarea,
 .form-group select {
   padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
   font-size: 1rem;
   font-family: inherit;
   transition: border-color 0.3s, box-shadow 0.3s;
-  background: #fff;
+  background: var(--color-surface);
+  color: var(--color-text);
 }
 
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #c49b3a;
-  box-shadow: 0 0 0 3px rgba(196, 155, 58, 0.1);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(212, 162, 73, 0.2);
 }
 
 .form-group input.error,
@@ -177,32 +179,33 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.85rem;
-  color: #666;
-  padding: 0.5rem;
-  background: #f9f9f9;
-  border-radius: 5px;
+  color: var(--color-muted);
+  padding: 0.75rem 1rem;
+  background: rgba(18, 27, 68, 0.05);
+  border-radius: 10px;
 }
 
 .submit-btn {
-  background: #c49b3a;
-  color: #fff;
+  background: var(--color-accent);
+  color: #0b1433;
   border: none;
   padding: 1rem;
-  border-radius: 5px;
+  border-radius: 999px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
 }
 
 .submit-btn:hover:not(:disabled) {
-  background: #a8822f;
+  background: var(--color-accent-dark);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(196, 155, 58, 0.3);
+  box-shadow: 0 22px 40px rgba(13, 21, 51, 0.2);
 }
 
 .submit-btn:active:not(:disabled) {
@@ -217,8 +220,8 @@
 .spinner {
   width: 16px;
   height: 16px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-top-color: #fff;
+  border: 2px solid rgba(11, 20, 51, 0.15);
+  border-top-color: #0b1433;
   border-radius: 50%;
   animation: spin 0.6s linear infinite;
 }
@@ -265,14 +268,14 @@
 }
 
 .success-message p {
-  color: #666;
+  color: var(--color-muted);
   line-height: 1.6;
   margin-bottom: 0.5rem;
 }
 
 .success-note {
   font-size: 0.9rem;
-  color: #999;
+  color: rgba(28, 33, 65, 0.6);
   font-style: italic;
 }
 
@@ -297,15 +300,15 @@
 }
 
 .enquiry-form-container::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: rgba(18, 27, 68, 0.06);
   border-radius: 10px;
 }
 
 .enquiry-form-container::-webkit-scrollbar-thumb {
-  background: #c49b3a;
+  background: var(--color-accent);
   border-radius: 10px;
 }
 
 .enquiry-form-container::-webkit-scrollbar-thumb:hover {
-  background: #a8822f;
+  background: var(--color-accent-dark);
 }

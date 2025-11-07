@@ -7,7 +7,7 @@ const Contact = () => {
   const [contactInfo] = useState({
     address: '123 Main Street, Madurai, Tamil Nadu 625001',
     phone: '+91 98765 43210',
-    email: 'info@meenakshibuilders.com',
+    email: 'hello@happyhomes.com',
     hours: 'Monday - Saturday: 9:00 AM - 6:00 PM'
   });
 
@@ -16,7 +16,7 @@ const Contact = () => {
       <div className="page-header">
         <div className="container">
           <h1>Contact Us</h1>
-          <p>Get in Touch with Meenakshi Builders</p>
+          <p>Get in Touch with Happy Homes</p>
         </div>
       </div>
 
@@ -78,7 +78,7 @@ const Contact = () => {
 
       {showEnquiryForm && (
         <EnquiryForm 
-          title="Contact Meenakshi Builders"
+          title="Contact Happy Homes"
           subtitle="We'd love to hear from you!"
           onClose={() => setShowEnquiryForm(false)}
         />
@@ -88,4 +88,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
 

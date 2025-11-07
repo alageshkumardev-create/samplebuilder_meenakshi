@@ -45,7 +45,7 @@ const Leadership = () => {
             <p>
               Our leadership team brings together decades of combined experience in real estate, 
               construction, and business management. Each member brings unique expertise and a shared 
-              commitment to excellence, making Meenakshi Builders the best builders in Madurai.
+              commitment to excellence, making Happy Homes the best builders in Madurai.
             </p>
           </div>
 
@@ -76,4 +76,5 @@ const Leadership = () => {
 };
 
 export default Leadership;
+
 

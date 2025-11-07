@@ -10,7 +10,7 @@ const ProjectDetail = () => {
   // In a real app, this would fetch from an API based on id
   const project = {
     id: id,
-    name: 'Meenakshi Towers',
+    name: 'Happy Elite City',
     location: 'Oomachikulam, Madurai',
     description: 'Ultra-Luxury 1, 2 and 3 BHK Apartments with modern amenities and premium finishes. Located in the prime area of Oomachikulam, this project offers the perfect blend of luxury and convenience.',
     image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop',

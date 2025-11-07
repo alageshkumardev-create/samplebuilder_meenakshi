@@ -5,8 +5,8 @@ const Blog = () => {
   const blogPosts = [
     {
       id: 1,
-      title: 'Why Choose Meenakshi Builders for Your Dream Home',
-      excerpt: 'Discover what makes Meenakshi Builders the best builders in Madurai and why thousands of families trust us.',
+      title: 'Why Choose Happy Homes for Your Dream Home',
+      excerpt: 'Discover what makes Happy Homes the best builders in Madurai and why thousands of families trust us.',
       date: 'January 15, 2024',
       category: 'Real Estate'
     },
@@ -52,7 +52,7 @@ const Blog = () => {
       <div className="page-header">
         <div className="container">
           <h1>Blog</h1>
-          <p>Insights, Tips, and Updates from Meenakshi Builders</p>
+          <p>Insights, Tips, and Updates from Happy Homes</p>
         </div>
       </div>
 
@@ -91,4 +91,5 @@ const Blog = () => {
 };
 
 export default Blog;
+
 

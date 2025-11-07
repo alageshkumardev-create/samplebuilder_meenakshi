@@ -24,12 +24,12 @@ const Founder = () => {
               <div className="founder-bio">
                 <p>
                   With a vision to transform the real estate landscape in Madurai, our founder established 
-                  Meenakshi Builders in 1993. What started as a small venture has grown into one of the most 
+                  Happy Homes in 1993. What started as a small venture has grown into one of the most 
                   trusted names in the construction industry, with over 5000 homes delivered across Madurai 
                   and Coimbatore.
                 </p>
                 <p>
-                  Under the founder's leadership, Meenakshi Builders has consistently maintained the highest 
+                  Under the founder's leadership, Happy Homes has consistently maintained the highest 
                   standards of quality, integrity, and customer satisfaction. The company's commitment to 
                   excellence and innovation has made it the best builders in Madurai.
                 </p>
@@ -71,4 +71,5 @@ const Founder = () => {
 };
 
 export default Founder;
+
 

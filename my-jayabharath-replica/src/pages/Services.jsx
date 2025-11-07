@@ -49,7 +49,7 @@ const Services = () => {
           <div className="services-intro">
             <h2>What We Offer</h2>
             <p>
-              Meenakshi Builders provides end-to-end real estate solutions, from construction 
+              Happy Homes provides end-to-end real estate solutions, from construction 
               to post-sale support. Our comprehensive services ensure a seamless experience 
               for our customers.
             </p>
@@ -119,4 +119,5 @@ const Services = () => {
 };
 
 export default Services;
+
 

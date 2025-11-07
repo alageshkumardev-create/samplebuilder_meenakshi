@@ -61,7 +61,7 @@ const Careers = () => {
           <div className="careers-intro">
             <h2>Why Work With Us?</h2>
             <p>
-              At Meenakshi Builders, we believe in nurturing talent and providing opportunities 
+              At Happy Homes, we believe in nurturing talent and providing opportunities 
               for growth. Join us in building homes and creating lasting value for our customers. 
               We offer a dynamic work environment, competitive compensation, and opportunities 
               to work on exciting projects.
@@ -135,4 +135,5 @@ const Careers = () => {
 };
 
 export default Careers;
+
 

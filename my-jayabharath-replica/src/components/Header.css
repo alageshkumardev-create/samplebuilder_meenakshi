@@ -1,6 +1,6 @@
 .header {
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: var(--color-surface);
+  box-shadow: 0 4px 20px rgba(18, 27, 68, 0.08);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -17,18 +17,21 @@
 
 .logo a {
   font-size: 1.5rem;
-  font-weight: bold;
-  color: #c49b3a;
+  font-weight: 700;
+  color: var(--color-primary);
   text-decoration: none;
   display: block;
+  letter-spacing: 0.04em;
 }
 
 .tagline {
   display: block;
   font-size: 0.75rem;
-  color: #666;
-  font-weight: normal;
+  color: var(--color-muted);
+  font-weight: 500;
   margin-top: 0.25rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .menu-toggle {
@@ -43,7 +46,7 @@
 .menu-toggle span {
   width: 25px;
   height: 3px;
-  background: #333;
+  background: var(--color-primary);
   margin: 3px 0;
   transition: 0.3s;
 }
@@ -63,18 +66,18 @@
 
 .nav-item a {
   text-decoration: none;
-  color: #333;
+  color: var(--color-text);
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .nav-item a:hover {
-  color: #c49b3a;
+  color: var(--color-accent);
 }
 
 .dropdown-trigger {
   cursor: pointer;
-  color: #333;
+  color: var(--color-text);
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -82,7 +85,7 @@
 }
 
 .dropdown-trigger:hover {
-  color: #c49b3a;
+  color: var(--color-accent);
 }
 
 .arrow {
@@ -98,8 +101,8 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  background: var(--color-surface);
+  box-shadow: 0 16px 40px rgba(18, 27, 68, 0.15);
   min-width: 220px;
   opacity: 0;
   visibility: hidden;
@@ -124,14 +127,14 @@
 .dropdown-menu a {
   display: block;
   padding: 0.75rem 1.5rem;
-  color: #333;
+  color: var(--color-text);
   text-decoration: none;
-  transition: background 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 
 .dropdown-menu a:hover {
-  background: #f5f5f5;
-  color: #c49b3a;
+  background: rgba(18, 27, 68, 0.05);
+  color: var(--color-accent);
 }
 
 .sub-dropdown {
@@ -141,16 +144,19 @@
 .sub-dropdown > span {
   display: block;
   padding: 0.75rem 1.5rem;
-  color: #666;
+  color: var(--color-muted);
   font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
 }
 
 .sub-dropdown-menu {
   position: absolute;
   left: 100%;
   top: 0;
-  background: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  background: var(--color-surface);
+  box-shadow: 0 16px 40px rgba(18, 27, 68, 0.15);
   min-width: 200px;
   list-style: none;
   padding: 0.5rem 0;
@@ -172,7 +178,7 @@
 }
 
 .enquire-btn {
-  background: #c49b3a;
+  background: var(--color-accent);
   color: #fff !important;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
@@ -180,7 +186,7 @@
 }
 
 .enquire-btn:hover {
-  background: #a8822f;
+  background: var(--color-accent-dark);
 }
 
 @media (max-width: 768px) {
@@ -193,8 +199,8 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: #fff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    background: var(--color-surface);
+    box-shadow: 0 16px 40px rgba(18, 27, 68, 0.15);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s;
@@ -241,4 +247,5 @@
     margin-left: 1rem;
   }
 }
+
 

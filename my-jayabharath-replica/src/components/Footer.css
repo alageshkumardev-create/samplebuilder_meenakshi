@@ -1,14 +1,26 @@
 .footer {
-  background: #1a1a1a;
+  background: var(--color-primary);
   color: #fff;
-  padding: 3rem 0 1rem;
+  padding: 3.5rem 0 1.5rem;
   margin-top: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(212, 162, 73, 0.35), rgba(18, 27, 68, 0));
+  opacity: 0.9;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-content {
@@ -29,20 +41,22 @@
 }
 
 .footer-section h3 {
-  color: #c49b3a;
+  color: var(--color-accent);
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .footer-section h4 {
-  color: #c49b3a;
+  color: var(--color-accent);
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .footer-section p {
-  color: #ccc;
-  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
   margin-bottom: 0.5rem;
 }
 
@@ -57,13 +71,13 @@
 }
 
 .footer-section ul li a {
-  color: #ccc;
+  color: rgba(255, 255, 255, 0.78);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-section ul li a:hover {
-  color: #c49b3a;
+  color: var(--color-accent);
 }
 
 .social-links {
@@ -73,20 +87,20 @@
 }
 
 .social-links a {
-  color: #ccc;
+  color: rgba(255, 255, 255, 0.78);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .social-links a:hover {
-  color: #c49b3a;
+  color: var(--color-accent);
 }
 
 .footer-bottom {
-  border-top: 1px solid #333;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding-top: 1rem;
   text-align: center;
-  color: #999;
+  color: rgba(255, 255, 255, 0.6);
   font-size: 0.9rem;
 }
 

@@ -11,7 +11,7 @@ const Media = () => {
     },
     {
       id: 2,
-      title: 'Meenakshi Builders Featured in Real Estate Magazine',
+      title: 'Happy Homes Featured in Real Estate Magazine',
       type: 'News Article',
       date: 'January 15, 2024'
     },
@@ -23,7 +23,7 @@ const Media = () => {
     },
     {
       id: 4,
-      title: 'Video: Project Tour of Meenakshi Towers',
+      title: 'Video: Project Tour of Happy Elite City',
       type: 'Video',
       date: 'December 25, 2023'
     },
@@ -56,7 +56,7 @@ const Media = () => {
             <h2>In the News</h2>
             <p>
               Stay updated with the latest news, press releases, awards, and media coverage 
-              about Meenakshi Builders.
+              about Happy Homes.
             </p>
           </div>
 
@@ -77,4 +77,5 @@ const Media = () => {
 };
 
 export default Media;
+
 

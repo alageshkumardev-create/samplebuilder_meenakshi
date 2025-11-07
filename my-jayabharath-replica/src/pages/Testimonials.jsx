@@ -7,15 +7,15 @@ const Testimonials = () => {
       id: 1,
       name: 'Rajesh Kumar',
       location: 'Madurai',
-      project: 'Meenakshi Green Valley',
+      project: 'Happy Green Valley',
       rating: 5,
-      text: 'Meenakshi Builders delivered exactly what they promised. The quality of construction is excellent, and the team was very professional throughout the process. We are extremely happy with our new home.'
+      text: 'Happy Homes delivered exactly what they promised. The quality of construction is excellent, and the team was very professional throughout the process. We are extremely happy with our new home.'
     },
     {
       id: 2,
       name: 'Priya Sharma',
       location: 'Madurai',
-      project: 'Meenakshi Towers',
+      project: 'Happy Elite City',
       rating: 5,
       text: 'Best builders in Madurai! The attention to detail and customer service is outstanding. Our apartment is beautiful and the amenities are world-class. Highly recommended!'
     },
@@ -23,15 +23,15 @@ const Testimonials = () => {
       id: 3,
       name: 'Vikram Reddy',
       location: 'Coimbatore',
-      project: 'Meenakshi Residency',
+      project: 'Happy Signature Residency',
       rating: 5,
-      text: 'We purchased a villa in Coimbatore and the experience has been fantastic. The project was completed on time, and the quality exceeded our expectations. Thank you Meenakshi Builders!'
+      text: 'We purchased a villa in Coimbatore and the experience has been fantastic. The project was completed on time, and the quality exceeded our expectations. Thank you Happy Homes!'
     },
     {
       id: 4,
       name: 'Anita Devi',
       location: 'Madurai',
-      project: 'Meenakshi Heights',
+      project: 'Happy Heights',
       rating: 5,
       text: '32+ years of experience really shows in their work. The legal documentation was clear, construction quality is top-notch, and the location is perfect. Great investment!'
     },
@@ -39,15 +39,15 @@ const Testimonials = () => {
       id: 5,
       name: 'Suresh Iyer',
       location: 'Madurai',
-      project: 'Meenakshi Gardens',
+      project: 'Happy Gardens',
       rating: 5,
-      text: 'The team at Meenakshi Builders is very responsive and professional. They kept us updated throughout the construction process. We are looking forward to moving into our new home!'
+      text: 'The team at Happy Homes is very responsive and professional. They kept us updated throughout the construction process. We are looking forward to moving into our new home!'
     },
     {
       id: 6,
       name: 'Deepa Nair',
       location: 'Coimbatore',
-      project: 'Meenakshi Residency',
+      project: 'Happy Signature Residency',
       rating: 5,
       text: 'Excellent builders with a great track record. The villa we purchased is exactly as shown, and the gated community is well-maintained. Very satisfied with our purchase.'
     }
@@ -68,7 +68,7 @@ const Testimonials = () => {
             <h2>Happy Homeowners</h2>
             <p>
               Our customers are our biggest advocates. Here's what they have to say about 
-              their experience with Meenakshi Builders.
+              their experience with Happy Homes.
             </p>
           </div>
 
@@ -112,4 +112,5 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
 

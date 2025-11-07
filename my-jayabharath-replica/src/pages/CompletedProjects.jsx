@@ -6,7 +6,7 @@ const CompletedProjects = () => {
   const completedProjects = [
     {
       id: 101,
-      name: 'Meenakshi Heights',
+      name: 'Happy Heights',
       location: 'Madurai',
       description: 'Successfully completed luxury residential project with modern amenities.',
       bhk: '3, 4',
@@ -16,7 +16,7 @@ const CompletedProjects = () => {
     },
     {
       id: 102,
-      name: 'Meenakshi Apartments',
+      name: 'Happy Apartments',
       location: 'Madurai',
       description: 'Premium apartments delivered on time with excellent quality.',
       bhk: '2, 3',
@@ -26,7 +26,7 @@ const CompletedProjects = () => {
     },
     {
       id: 103,
-      name: 'Meenakshi Paradise',
+      name: 'Happy Paradise',
       location: 'Coimbatore',
       description: 'Luxury gated community with world-class facilities.',
       bhk: '3, 4, 5',
@@ -49,7 +49,7 @@ const CompletedProjects = () => {
         <section className="projects-content">
           <div className="intro-text">
             <p>
-              Over the years, Meenakshi Builders has successfully completed numerous projects, 
+              Over the years, Happy Homes has successfully completed numerous projects, 
               delivering homes that exceed expectations. Each completed project stands as a 
               testament to our commitment to quality, timely delivery, and customer satisfaction.
             </p>
@@ -67,4 +67,5 @@ const CompletedProjects = () => {
 };
 
 export default CompletedProjects;
+
 
