@@ -1,0 +1,116 @@
+.founder-page {
+  min-height: 100vh;
+  padding-top: 2rem;
+}
+
+.founder-content {
+  padding: 4rem 0;
+}
+
+.founder-profile {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  align-items: start;
+}
+
+.founder-image {
+  position: sticky;
+  top: 100px;
+}
+
+.founder-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.founder-details h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.founder-name {
+  font-size: 1.5rem;
+  color: #c49b3a;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.founder-title {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.founder-bio p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.achievements-section {
+  margin-top: 4rem;
+  padding-top: 4rem;
+  border-top: 2px solid #eee;
+}
+
+.achievements-section h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.achievement-item {
+  text-align: center;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.achievement-item:hover {
+  transform: translateY(-5px);
+}
+
+.achievement-item h3 {
+  color: #c49b3a;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.achievement-item p {
+  color: #666;
+  font-size: 1rem;
+}
+
+@media (max-width: 968px) {
+  .founder-profile {
+    grid-template-columns: 1fr;
+  }
+
+  .founder-image {
+    position: static;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
