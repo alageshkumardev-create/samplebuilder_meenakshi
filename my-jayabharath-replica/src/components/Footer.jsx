@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { footerPrimaryLinks, informationLinkGroups } from '../data/linkGroups';
+// import { Link } from 'react-router-dom';
+// import { footerPrimaryLinks, informationLinkGroups } from '../data/linkGroups';
 import './Footer.css';
 
 const Footer = () => {
@@ -22,8 +22,8 @@ const Footer = () => {
           </div> */}
           <div className="footer-contact">
             <span className="footer-contact-label">Customer Service</span>
-            <a href="tel:+919876543210">Call Now</a>
-            <a href="mailto:info@jayabharath.com">Mail Us</a>
+            <a href="tel:" role="button">Call Now</a>
+            <a href="mailto:" role="button">Mail Us</a>
           </div>
         </div>
       </div>

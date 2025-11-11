@@ -79,7 +79,7 @@ const Blog = () => {
                   </div>
                   <h3>{post.title}</h3>
                   <p className="blog-excerpt">{post.excerpt}</p>
-                  <a href="#" className="read-more">Read More →</a>
+                  <a href="/#" role="button" className="read-more">Read More →</a>
                 </div>
               </article>
             ))}

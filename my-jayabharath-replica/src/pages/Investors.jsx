@@ -26,25 +26,25 @@ const Investors = () => {
             <div className="investor-card">
               <h3>Financial Reports</h3>
               <p>Access our annual reports, quarterly results, and financial statements.</p>
-              <a href="#" className="investor-link">View Reports →</a>
+              <a href="/#" role="button" className="investor-link">View Reports →</a>
             </div>
 
             <div className="investor-card">
               <h3>Corporate Governance</h3>
               <p>Learn about our corporate governance practices and board of directors.</p>
-              <a href="#" className="investor-link">Learn More →</a>
+              <a href="/#" role="button" className="investor-link">Learn More →</a>
             </div>
 
             <div className="investor-card">
               <h3>Investor Updates</h3>
               <p>Stay informed with the latest investor news and announcements.</p>
-              <a href="#" className="investor-link">View Updates →</a>
+              <a href="/#" role="button" className="investor-link">View Updates →</a>
             </div>
 
             <div className="investor-card">
               <h3>Contact Investor Relations</h3>
               <p>Get in touch with our investor relations team for any queries.</p>
-              <a href="#" className="investor-link">Contact Us →</a>
+              <a href="/#" role="button" className="investor-link">Contact Us →</a>
             </div>
           </div>
 

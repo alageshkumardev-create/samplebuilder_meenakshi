@@ -117,7 +117,7 @@ const Careers = () => {
                     <span className="job-dept">{job.department}</span>
                     <span className="job-location">📍 {job.location}</span>
                   </div>
-                  <a href="#" className="apply-btn">Apply Now</a>
+                  <a href="/#" role="button" className="apply-btn">Apply Now</a>
                 </div>
               ))}
             </div>
@@ -126,7 +126,7 @@ const Careers = () => {
           <div className="apply-section">
             <h2>Don't See a Role That Fits?</h2>
             <p>We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.</p>
-            <a href="#" className="general-apply-btn">Submit General Application</a>
+            <a href="/#" role="button" className="general-apply-btn">Submit General Application</a>
           </div>
         </section>
       </div>

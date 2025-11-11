@@ -13,7 +13,7 @@ export default function CustomAccordion() {
           </summary>
           <div className="accordion-body mt-3">
             <p>
-              If you are looking for <a href="#">builders in Madurai</a> who deliver
+              If you are looking for <a href="/#" role="button">builders in Madurai</a> who deliver
               outstanding quality...
             </p>
             {/* ...rest of your content */}

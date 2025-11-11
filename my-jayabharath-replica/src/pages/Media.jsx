@@ -66,7 +66,7 @@ const Media = () => {
                 <div className="media-type-badge">{item.type}</div>
                 <h3>{item.title}</h3>
                 <p className="media-date">{item.date}</p>
-                <a href="#" className="read-more">Read More →</a>
+                <a href="/#" role="button" className="read-more">Read More →</a>
               </div>
             ))}
           </div>

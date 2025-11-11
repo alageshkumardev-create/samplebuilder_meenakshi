@@ -6,7 +6,7 @@ const Contact = () => {
   const [showEnquiryForm, setShowEnquiryForm] = useState(false);
   const [contactInfo] = useState({
     address: '123 Main Street, Madurai, Tamil Nadu 625001',
-    phone: '+91 98765 43210',
+    phone: '+91 98765 4355210',
     email: 'hello@happyhomes.com',
     hours: 'Monday - Saturday: 9:00 AM - 6:00 PM'
   });
@@ -37,14 +37,14 @@ const Contact = () => {
                   <div className="info-icon">📞</div>
                   <div>
                     <h4>Phone</h4>
-                    <p><a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a></p>
+                    <p><a href={`tel:${contactInfo.phone}`} role="button">{contactInfo.phone}</a></p>
                   </div>
                 </div>
                 <div className="info-item">
                   <div className="info-icon">✉️</div>
                   <div>
                     <h4>Email</h4>
-                    <p><a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></p>
+                    <p><a href={`mailto:${contactInfo.email}`} role="button">{contactInfo.email}</a></p>
                   </div>
                 </div>
                 <div className="info-item">
