@@ -4,88 +4,139 @@ import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isAboutOpen, setIsAboutOpen] = useState(false);
-  const [isProjectsOpen, setIsProjectsOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(prev => !prev);
+    setOpenDropdown(null);
   };
 
-  const toggleAbout = () => {
-    setIsAboutOpen(!isAboutOpen);
+  const handleDropdownToggle = key => {
+    setOpenDropdown(prev => (prev === key ? null : key));
   };
 
-  const toggleProjects = () => {
-    setIsProjectsOpen(!isProjectsOpen);
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setOpenDropdown(null);
   };
+
+  const dropdownProps = key => ({
+    onMouseEnter: () => setOpenDropdown(key),
+    onMouseLeave: () => setOpenDropdown(null)
+  });
 
   return (
-    <header className="header">
-      <div className="header-container">
-        <div className="logo">
-          <Link to="/">Happy Homes</Link>
-          <span className="tagline">No. 1 Builders in Madurai</span>
+    <header className={`site-header ${isMenuOpen ? 'menu-open' : ''}`}>
+      {/* <div className="top-strip">
+        <div className="container top-strip-content">
+          <span className="top-strip-badge">Customer Service</span>
+          <div className="top-strip-links">
+            <a href="tel:+919876543210" className="top-link">Call Now</a>
+            <span className="top-divider">|</span>
+            <a href="mailto:hello@happyhomes.com" className="top-link">Mail Us</a>
+          </div>
         </div>
-        
-        <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+      </div> */}
 
-        <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
-          <ul className="nav-list">
-            <li className="nav-item">
-              <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
-            </li>
-            <li className="nav-item dropdown" onMouseEnter={() => setIsAboutOpen(true)} onMouseLeave={() => setIsAboutOpen(false)}>
-              <span className="dropdown-trigger">About Us <span className="arrow">▼</span></span>
-              <ul className={`dropdown-menu ${isAboutOpen ? 'show' : ''}`}>
-                <li><Link to="/founder" onClick={() => setIsMenuOpen(false)}>Founder and MD</Link></li>
-                <li><Link to="/leadership" onClick={() => setIsMenuOpen(false)}>Leadership Team</Link></li>
-                <li><Link to="/completed-projects" onClick={() => setIsMenuOpen(false)}>Completed Projects</Link></li>
-                <li><Link to="/services" onClick={() => setIsMenuOpen(false)}>Our Services</Link></li>
-                <li><Link to="/testimonials" onClick={() => setIsMenuOpen(false)}>Testimonial</Link></li>
-                <li><Link to="/blog" onClick={() => setIsMenuOpen(false)}>Blog</Link></li>
-              </ul>
-            </li>
-            <li className="nav-item dropdown" onMouseEnter={() => setIsProjectsOpen(true)} onMouseLeave={() => setIsProjectsOpen(false)}>
-              <span className="dropdown-trigger">Ongoing Projects <span className="arrow">▼</span></span>
-              <ul className={`dropdown-menu ${isProjectsOpen ? 'show' : ''}`}>
-                <li className="sub-dropdown">
-                  <span>Madurai</span>
-                  <ul className="sub-dropdown-menu">
-                    <li><Link to="/ongoing-projects?location=surya-nagar" onClick={() => setIsMenuOpen(false)}>Surya Nagar</Link></li>
-                    <li><Link to="/ongoing-projects?location=oomachikulam" onClick={() => setIsMenuOpen(false)}>Oomachikulam</Link></li>
-                    <li><Link to="/ongoing-projects?location=avaniyapuram" onClick={() => setIsMenuOpen(false)}>Avaniyapuram</Link></li>
-                    <li><Link to="/ongoing-projects?location=thuvariman" onClick={() => setIsMenuOpen(false)}>Thuvariman</Link></li>
-                  </ul>
-                </li>
-                <li className="sub-dropdown">
-                  <span>Coimbatore</span>
-                  <ul className="sub-dropdown-menu">
-                    <li><Link to="/ongoing-projects?location=saravanampatti" onClick={() => setIsMenuOpen(false)}>Saravanampatti</Link></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li className="nav-item">
-              <Link to="/media" onClick={() => setIsMenuOpen(false)}>Media</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/investors" onClick={() => setIsMenuOpen(false)}>Investors</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/careers" onClick={() => setIsMenuOpen(false)}>Careers</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/" className="enquire-btn" onClick={() => setIsMenuOpen(false)}>Enquire Now</Link>
-            </li>
-          </ul>
-        </nav>
+      <div className="nav-wrapper">
+        <div className="container nav-container">
+          <div className="brand">
+            <Link to="/" onClick={closeMenu} className="brand-name">Happy Homes</Link>
+            <span className="brand-tagline">Builders in Madurai &amp; Coimbatore</span>
+          </div>
+
+          <button
+            className="menu-toggle"
+            onClick={toggleMenu}
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMenuOpen}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+
+          <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`} aria-label="Main navigation">
+            <ul className="nav-list">
+              <li className="nav-item">
+                <Link to="/" onClick={closeMenu}>Home</Link>
+              </li>
+
+              <li
+                className={`nav-item dropdown ${openDropdown === 'about' ? 'open' : ''}`}
+                {...dropdownProps('about')}
+              >
+                <button
+                  className="dropdown-trigger"
+                  onClick={() => handleDropdownToggle('about')}
+                  aria-expanded={openDropdown === 'about'}
+                >
+                  About Us <span className="arrow">▼</span>
+                </button>
+                <ul className={`dropdown-menu ${openDropdown === 'about' ? 'show' : ''}`}>
+                  <li><Link to="/founder" onClick={closeMenu}>Founder and MD</Link></li>
+                  <li><Link to="/leadership" onClick={closeMenu}>Leadership Team</Link></li>
+                  <li><Link to="/completed-projects" onClick={closeMenu}>Completed Projects</Link></li>
+                  <li><Link to="/services" onClick={closeMenu}>Our Services</Link></li>
+                  <li><Link to="/testimonials" onClick={closeMenu}>Testimonials</Link></li>
+                  <li><Link to="/blog" onClick={closeMenu}>Blog</Link></li>
+                  <li><Link to="/contact" onClick={closeMenu}>Builders in Coimbatore</Link></li>
+                </ul>
+              </li>
+
+              <li
+                className={`nav-item dropdown ${openDropdown === 'projects' ? 'open' : ''}`}
+                {...dropdownProps('projects')}
+              >
+                <button
+                  className="dropdown-trigger"
+                  onClick={() => handleDropdownToggle('projects')}
+                  aria-expanded={openDropdown === 'projects'}
+                >
+                  Ongoing Projects <span className="arrow">▼</span>
+                </button>
+                <ul className={`dropdown-menu ${openDropdown === 'projects' ? 'show' : ''}`}>
+                  <li className="sub-dropdown">
+                    <span>Madurai</span>
+                    <ul className="sub-dropdown-menu">
+                      <li><Link to="/ongoing-projects?location=surya-nagar" onClick={closeMenu}>Surya Nagar</Link></li>
+                      <li><Link to="/ongoing-projects?location=oomachikulam" onClick={closeMenu}>Oomachikulam</Link></li>
+                      <li><Link to="/ongoing-projects?location=avaniyapuram" onClick={closeMenu}>Avaniyapuram</Link></li>
+                      <li><Link to="/ongoing-projects?location=thuvariman" onClick={closeMenu}>Thuvariman</Link></li>
+                    </ul>
+                  </li>
+                  <li className="sub-dropdown">
+                    <span>Coimbatore</span>
+                    <ul className="sub-dropdown-menu">
+                      <li><Link to="/ongoing-projects?location=saravanampatti" onClick={closeMenu}>Saravanampatti</Link></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li className="nav-item">
+                <Link to="/media" onClick={closeMenu}>Media</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/investors" onClick={closeMenu}>Investors</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/careers" onClick={closeMenu}>Careers</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/contact" onClick={closeMenu}>Contact</Link>
+              </li>
+            </ul>
+            <div className="nav-cta-group">
+              <Link to="/contact" className="nav-btn outline" onClick={closeMenu}>
+                Download Brochure
+              </Link>
+              <Link to="/contact" className="nav-btn solid" onClick={closeMenu}>
+                Enquire Now
+              </Link>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
   );

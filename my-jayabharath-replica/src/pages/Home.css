@@ -3,133 +3,73 @@
   background: var(--color-background);
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero */
 .hero-section {
   position: relative;
-  padding: 6rem 0 5rem;
-  color: #fff;
-  overflow: hidden;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.hero-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, rgba(11, 20, 51, 0.92) 0%, rgba(18, 27, 68, 0.82) 35%, rgba(19, 29, 70, 0.6) 55%, rgba(10, 16, 40, 0.45) 100%);
+.hero-overlay {
+  background: linear-gradient(120deg, rgba(11, 20, 51, 0.88) 0%, rgba(9, 14, 38, 0.72) 45%, rgba(8, 12, 34, 0.55) 70%, rgba(8, 12, 34, 0.45) 100%);
+  padding: 25.5rem 0;
 }
 
-.hero-layout {
-  position: relative;
-  z-index: 1;
+.hero-container {
   display: flex;
-  align-items: center;
   gap: 3rem;
   flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: #fff;
 }
 
 .hero-content {
   flex: 1;
-  min-width: 280px;
-  max-width: 520px;
+  min-width: 320px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 1.25rem;
-  padding: 1.5rem;
-  background: linear-gradient(130deg, rgba(255, 255, 255, 0.08) 0%, rgba(11, 20, 51, 0) 45%);
-  border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 24px 50px rgba(8, 14, 40, 0.25);
+  gap: 1.6rem;
 }
 
 .hero-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.35rem 1rem;
+  padding: 0.4rem 1.2rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.16);
-  font-size: 0.8rem;
-  letter-spacing: 0.16em;
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
 }
 
-.hero-section h1 {
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
+.hero-content h1 {
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  line-height: 1.15;
+  margin: 0;
 }
 
 .hero-subtitle {
   font-size: 1.05rem;
   line-height: 1.9;
-  margin-bottom: 2.5rem;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 640px;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-}
-
-.hero-stats {
-  display: flex;
-  align-items: stretch;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.hero-stat {
-  min-width: 120px;
-  padding: 1rem 1.25rem;
-  border-radius: 16px;
-  background: rgba(11, 20, 51, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
-}
-
-.hero-stat-value {
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: 0.05em;
-}
-
-.hero-stat-label {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.hero-highlight {
-  margin-top: 0;
-  max-width: 460px;
-  padding: 1.5rem 2rem;
-  border-radius: 18px;
-  background: rgba(11, 20, 51, 0.55);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 20px 40px rgba(8, 14, 40, 0.25);
-  align-self: stretch;
-}
-
-.hero-highlight h3 {
-  font-size: 1.35rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero-highlight p {
-  font-size: 0.95rem;
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.82);
 }
 
 .cta-button {
@@ -154,7 +94,7 @@
 .secondary-button {
   background: transparent;
   color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.55);
+  border: 2px solid rgba(255, 255, 255, 0.6);
   padding: 0.85rem 2.6rem;
   font-size: 1.05rem;
   font-weight: 600;
@@ -164,85 +104,461 @@
 }
 
 .secondary-button:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.85);
 }
 
-
-.hero-controls {
-  position: absolute;
-  left: 50%;
-  bottom: -4.5rem;
-  transform: translateX(-50%);
+.hero-stats {
   display: flex;
-  justify-content: center;
-  width: auto;
-  z-index: 2;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.hero-controls {
+.hero-stat {
+  min-width: 130px;
+  padding: 1.1rem 1.5rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
-  justify-content: center;
-  margin: 2.5rem auto 0;
-}
-
-.carousel-dots {
-  display: flex;
-  gap: 0.75rem;
-  padding: 0.75rem 1.25rem;
-  border-radius: 999px;
-  background: rgba(11, 20, 51, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 14px 34px rgba(8, 14, 40, 0.32);
+  flex-direction: column;
+  gap: 0.35rem;
   backdrop-filter: blur(6px);
 }
 
-.carousel-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s;
+.hero-stat-value {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: 0.05em;
 }
 
-.carousel-dot.active {
+.hero-stat-label {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.hero-form {
+  flex: 1;
+  min-width: 320px;
+  max-width: 380px;
   background: #fff;
-  border-color: #fff;
-  transform: scale(1.2);
+  border-radius: 24px;
+  padding: 2.3rem;
+  border: 1px solid rgba(11, 20, 51, 0.1);
+  box-shadow: 0 26px 55px rgba(11, 20, 51, 0.16);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
 }
 
-.container {
+.hero-form h3 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.hero-form-subtitle {
+  font-size: 0.96rem;
+  color: var(--color-muted);
+  margin: 0 0 0.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  border-radius: 14px;
+  border: 1px solid rgba(11, 20, 51, 0.18);
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: rgba(11, 20, 51, 0.03);
+  transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(212, 162, 73, 0.25);
+}
+
+.hero-form textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.form-submit {
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 18px 38px rgba(212, 162, 73, 0.26);
+}
+
+.privacy-note {
+  font-size: 0.78rem;
+  color: rgba(11, 20, 51, 0.6);
+  margin: 0;
+}
+
+/* Typing Text */
+.bestbuilder-grid{
+  text-align: center;
+}
+.bestbuilder-span{
+  color: #0735d1;
+}
+.bestbuilder-section p{
+  text-align: justify;
+    padding: 4rem;
+}
+
+
+
+/* Assuming you have two dynamic text spans, one active and one inactive */
+.elementor-headline-dynamic-wrapper {
+  position: relative; /* Needed for absolute positioning of children */
+  display: inline-block; /* Or block, depending on layout */
+  overflow: hidden; /* Crucial to clip content */
+  width: auto; /* Adjust as needed */
+  height: 1em; /* Adjust based on font size */
+}
+
+.elementor-headline-dynamic-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap; /* Prevent text wrapping */
+  /* Initial state: hidden */
+  clip-path: inset(0 100% 0 0); /* Clips the text from the right */
+  animation: revealText 3s forwards; /* Example animation */
+}
+
+/* Define keyframes for the reveal animation */
+@keyframes revealText {
+  0% {
+    clip-path: inset(0 100% 0 0); /* Start fully clipped */
+  }
+  100% {
+    clip-path: inset(0 0% 0 0); /* Fully revealed */
+  }
+}
+
+/* If you want to alternate between texts, it gets more complex with pure CSS.
+   Usually, you'd toggle a class like '.elementor-headline-text-active' with JS
+   and apply the animation to the active class. */
+.elementor-headline-dynamic-text.elementor-headline-text-inactive {
+  clip-path: inset(0 100% 0 0); /* Ensure inactive text is hidden */
+  animation: none; /* No animation for inactive */
+}
+
+.elementor-headline-dynamic-text.elementor-headline-text-active {
+  clip-path: inset(0 0% 0 0); /* Ensure active text is visible */
+  animation: revealText 3s forwards; /* Animate active text */
+}
+
+/* typing Effect */
+.elementor-headline-dynamic-wrapper {
+  display: inline-block;
+  overflow: hidden; /* Crucial for clipping the text */
+  white-space: nowrap; /* Keep text on one line */
+  border-right: 0.15em solid orange; /* Optional: blinking cursor effect */
+  animation:
+    typing 3.5s steps(30, end) forwards,
+    blink-caret 0.75s step-end infinite;
+  /* You will need to calculate the max-width dynamically or set a fixed max-width */
+  max-width: 282.06px; /* From your previous output, use this as a reference */
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% } /* Animates the width to reveal text */
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; } /* Blinking cursor */
+}
+
+/* If you have multiple dynamic texts, you'd need to hide/show them
+   and apply this animation sequentially, usually with JS. */
+.elementor-headline-dynamic-text {
+  /* No direct animation on this if the wrapper handles it */
+  opacity: 1; /* Ensure visible */
+}
+
+/* If switching between texts, you'd hide the inactive one */
+.elementor-headline-dynamic-text.elementor-headline-text-inactive {
+  display: none;
+}
+
+
+/* Dropdown Content */
+.dropdowntext-section {
+  margin-top: 2rem;
+}
+
+.accordion-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 0 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordion-content {
+  margin-top: 0.5rem;
+}
+
+
+/* Statcount Start */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  background-color: #fff;
+  justify-items: center
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  width: 90%;
+  text-align: center;
+  gap: 50px;
 }
 
-.about-section {
-  padding: 5rem 0;
+.stat-box {
+  flex: 1 1 200px;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #d32f2f; /* Change to your brand color */
+}
+
+.stat-title {
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Statcount End */
+
+/* PCARDST */
+.projects-section {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #faf7f5;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.tab-btn {
+  background-color: #f2f2f2;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  background-color: #0d2476;
+  color: #fff;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-card {
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-content {
+  text-align: left;
+  padding: 15px;
+}
+
+.project-content h4 {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.location,
+.bhk {
+  font-size: 14px;
+  color: #555;
+}
+
+.project-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.project-links a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #0d2476;
+  font-weight: 500;
+}
+
+.call-btn {
+  background-color: transparent;
+  border: 1px solid #0d2476;
+  color: #0d2476;
+  border-radius: 8px;
+  padding: 6px 14px;
+  margin-top: 10px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.call-btn:hover {
+  background-color: #0d2476;
+  color: #fff;
+}
+
+/* PCARDEND */
+
+
+/* Overview */
+.overview-section {
+  padding: 4.5rem 0;
   background: var(--color-surface);
 }
 
-.about-section h2 {
-  text-align: center;
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.overview-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem 2.2rem;
+  border: 1px solid rgba(11, 20, 51, 0.08);
+  box-shadow: 0 18px 40px rgba(11, 20, 51, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.overview-card h2 {
+  font-size: 1.6rem;
   color: var(--color-primary);
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  margin-bottom: 2rem;
+  margin: 0;
 }
 
-.about-content {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.about-content p {
+.overview-card p {
+  font-size: 1rem;
+  line-height: 1.85;
   color: var(--color-muted);
-  line-height: 1.9;
-  margin-bottom: 1.5rem;
-  font-size: 1.05rem;
+  margin: 0;
 }
 
+/* Brochure */
+.brochure-section {
+  padding: 4rem 0;
+  background: var(--color-background);
+}
+
+.brochure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+}
+
+.brochure-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 2rem 2.2rem;
+  border: 1px solid rgba(11, 20, 51, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: 0 18px 38px rgba(11, 20, 51, 0.08);
+}
+
+.brochure-card h3 {
+  font-size: 1.28rem;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.brochure-card p {
+  font-size: 0.98rem;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.brochure-card .privacy-note {
+  text-align: center;
+}
+
+/* Projects */
 .projects-section {
   padding: 5rem 0;
   background: var(--color-background);
@@ -251,8 +567,17 @@
 .projects-section h2 {
   text-align: center;
   color: var(--color-primary);
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  margin-bottom: 3rem;
+  font-size: clamp(1.9rem, 3.2vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  color: var(--color-muted);
+  line-height: 1.8;
+  font-size: 1.02rem;
 }
 
 .projects-grid {
@@ -261,6 +586,7 @@
   gap: 2rem;
 }
 
+/* Why Choose Us */
 .why-choose-section {
   padding: 5rem 0;
   background: var(--color-surface);
@@ -269,7 +595,7 @@
 .why-choose-section h2 {
   text-align: center;
   color: var(--color-primary);
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-size: clamp(1.9rem, 3.2vw, 2.5rem);
   margin-bottom: 3rem;
 }
 
@@ -282,7 +608,7 @@
 .feature-item {
   text-align: center;
   padding: 2.5rem 2rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85) 0%, rgba(244, 245, 249, 0.95) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(244, 245, 249, 0.96) 100%);
   border-radius: 18px;
   border: 1px solid rgba(18, 27, 68, 0.08);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -309,29 +635,66 @@
   line-height: 1.7;
 }
 
+/* Keyword Grid */
+.keyword-section {
+  padding: 5rem 0;
+  background: var(--color-background);
+}
+
+.keyword-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+}
+
+.keyword-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.keyword-column h3 {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.keyword-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.keyword-column li {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  line-height: 1.45;
+}
+
+/* Responsive */
 @media (max-width: 1024px) {
-  .hero-layout {
+  .hero-container {
     gap: 2rem;
-    justify-content: center;
   }
 }
 
 @media (max-width: 768px) {
-  .hero-section {
-    padding: 4rem 0 3.5rem;
-  }
-
-  .hero-content {
-    padding: 1.25rem;
-    gap: 1rem;
+  .hero-overlay {
+    padding: 10.5rem 0;
   }
 
   .hero-actions {
     justify-content: center;
   }
 
-  .hero-controls {
-    bottom: 1.5rem;
+  .hero-form {
+    max-width: 100%;
+  }
+
+  .section-subtitle {
+    margin-bottom: 2.4rem;
   }
 
   .projects-grid {
@@ -340,6 +703,10 @@
 }
 
 @media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+
   .hero-subtitle {
     font-size: 0.98rem;
   }
@@ -349,15 +716,16 @@
   }
 
   .hero-stat {
-    padding: 0.85rem 1rem;
-    border-radius: 14px;
+    padding: 0.95rem 1.1rem;
+    border-radius: 16px;
   }
 
-  .hero-highlight {
-    padding: 1.25rem 1.5rem;
+  .hero-form {
+    padding: 2rem 1.7rem;
   }
 
-  .hero-controls {
-    bottom: 1.1rem;
+  .keyword-grid {
+    grid-template-columns: 1fr;
   }
 }
+
