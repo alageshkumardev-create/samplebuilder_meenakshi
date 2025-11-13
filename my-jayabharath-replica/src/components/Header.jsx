@@ -42,7 +42,7 @@ const Header = () => {
         <div className="container nav-container">
           <div className="brand">
             <Link to="/" onClick={closeMenu} className="brand-name">Happy Homes</Link>
-            <span className="brand-tagline">Builders in Madurai &amp; Coimbatore</span>
+            <span className="brand-tagline">Builders in Madurai</span>
           </div>
 
           <button
@@ -123,14 +123,14 @@ const Header = () => {
               <li className="nav-item">
                 <Link to="/careers" onClick={closeMenu}>Careers</Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link to="/contact" onClick={closeMenu}>Contact</Link>
-              </li>
+              </li> */}
             </ul>
             <div className="nav-cta-group">
-              <Link to="/contact" className="nav-btn outline" onClick={closeMenu}>
+              {/* <Link to="/contact" className="nav-btn outline" onClick={closeMenu}>
                 Download Brochure
-              </Link>
+              </Link> */}
               <Link to="/contact" className="nav-btn solid" onClick={closeMenu}>
                 Enquire Now
               </Link>

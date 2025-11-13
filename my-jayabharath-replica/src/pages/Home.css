@@ -358,7 +358,7 @@
 .stat-number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #d32f2f; /* Change to your brand color */
+  color:  #200080; /* Change to your brand color */
 }
 
 .stat-title {
@@ -482,6 +482,253 @@
 
 /* PCARDEND */
 
+/* Why Choose Us St */
+/* Section Base */
+.whychooseus-section {
+  margin: 50px 0;
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+.whychooseus-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+/* Left Content */
+.whychooseus-content {
+  flex: 1 1 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeIn 1s ease;
+}
+
+/* Title */
+.whychooseus-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0c2d57;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+/* Divider */
+.divider {
+  width: 60px;
+  height: 3px;
+  background-color: #0d2bc5;
+  margin-bottom: 25px;
+  border-radius: 3px;
+}
+
+/* Headline (Rotating Text Animation) */
+.headline {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+.rotating-text {
+  color:  #0d2bc5;
+  display: inline-block;
+  animation: flipWords 3s infinite;
+}
+
+@keyframes flipWords {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  25% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+  75% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+}
+
+/* Paragraphs */
+.whychooseus-content p {
+  color: #444;
+  line-height: 1.7;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+.whychooseus-content a {
+  color: #0c2d57;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.whychooseus-content a:hover {
+ color: #0d2bc5;
+  /* text-decoration: underline; */
+}
+
+/* Button */
+.button-wrapper {
+  margin-top: 25px;
+}
+
+.more-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #5500ff;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 0.3s;
+}
+
+.more-button:hover {
+  background-color: #d7daf1;
+ 
+}
+
+.arrow-icon {
+  width: 10px;
+  height: 10px;
+  fill: #fff;
+}
+
+/* Right Side Placeholder (e.g., could hold an image or gradient) */
+.whychooseus-right {
+  flex: 1 1 400px;
+  background:center/cover no-repeat;
+  border-radius: 12px;
+  min-height: 300px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .whychooseus-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .whychooseus-right {
+    display: none;
+  }
+
+  .divider {
+    margin: 0 auto 25px;
+  }
+
+  .headline {
+    font-size: 20px;
+  }
+}
+
+/* Why Choose Us End */
+
+/* Achivement Card ST */
+/* SECTION BASE */
+.experience-section {
+  background-color: #f8f8f8;
+  padding: 70px 20px;
+}
+
+.experience-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* CARD STYLE */
+.experience-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* ICON STYLE */
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+  color: #c49a3a;
+}
+
+/* TEXT */
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .experience-container {
+    grid-template-columns: 1fr;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .experience-card {
+    padding: 20px;
+  }
+}
+
+/* Achivement Card End */
 
 /* Overview */
 .overview-section {

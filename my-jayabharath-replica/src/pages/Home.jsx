@@ -1,15 +1,25 @@
-import React, { useState } from 'react';
-import EnquiryForm from '../components/EnquiryForm';
-import ProjectCardcomp from '../components/ProjectCard';
+import React, { useState, useEffect } from 'react';
+// import EnquiryForm from '../components/EnquiryForm';
+// import ProjectCardcomp from '../components/ProjectCard';
+import ImageCarousel from "../components/Swiper";
+import buildimg from "../asset/buildingImage.jpg"
+import PopupFormLatest from "../components/PopupFormLatest";
+// import PopupForm from "../components/PopupForm";
 import './Home.css';
 // import { FaHome } from "react-icons/fa";
 import DropdownAccordion from "../components/Accordion";
 import CountUp from "react-countup";
+import GallerySection from '../components/GallerySection';
+import Testimonial from '../components/Testimonial';
+import LocationAccordion from '../components/LocationAccordion';
+import MapSection from '../components/MapSection';
+import SocialIcons from '../components/SocialIcons';
+import FooterJB from '../components/FooterJB';
+import TypingHeading from '../components/TypingAnimation';
+// import Popup from "../components/PopUp";
+import HomeCarousel from '../components/HomeCarousel'
 
 
-
-const heroBackground =
-  'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1600&h=900&fit=crop';
 
 // const heroStats = [
 //   { id: 'experience', value: '32+', label: 'Years of Excellence' },
@@ -17,153 +27,153 @@ const heroBackground =
 //   { id: 'cities', value: '2', label: 'Cities Served' }
 // ];
 
-const overviewContent = [
-  {
-    id: 'madurai-overview',
-    heading: 'Best Builders in Madurai for Dream Villas',
-    paragraphs: [
-      'With 32+ years of expertise and 5000+ homes built, Happy Homes stands as the most trusted builder in Madurai. Every villa and apartment is crafted with meticulous attention to detail, superior engineering, and timeless design.',
-      'From independent villas to high-rise apartments, we offer homes that match every lifestyle. Each community is thoughtfully planned with landscaped avenues, premium amenities, and exceptional connectivity to Madurai’s key destinations.'
-    ]
-  },
-  {
-    id: 'coimbatore-overview',
-    heading: 'Top Builders in Coimbatore for Luxury Villas',
-    paragraphs: [
-      'In Coimbatore, we focus on ultra-premium gated villas located in the fast-growing Saravanampatti corridor. Our projects feature expansive floor plans, contemporary facades, and resort-style amenities tailored for modern families.',
-      'Every development is RERA and OC approved with complete legal clarity, ensuring peace of mind and long-term value for both homeowners and investors.'
-    ]
-  }
-];
+// const overviewContent = [
+//   {
+//     id: 'madurai-overview',
+//     heading: 'Best Builders in Madurai for Dream Villas',
+//     paragraphs: [
+//       'With 32+ years of expertise and 5000+ homes built, Happy Homes stands as the most trusted builder in Madurai. Every villa and apartment is crafted with meticulous attention to detail, superior engineering, and timeless design.',
+//       'From independent villas to high-rise apartments, we offer homes that match every lifestyle. Each community is thoughtfully planned with landscaped avenues, premium amenities, and exceptional connectivity to Madurai’s key destinations.'
+//     ]
+//   },
+//   {
+//     id: 'coimbatore-overview',
+//     heading: 'Top Builders in Coimbatore for Luxury Villas',
+//     paragraphs: [
+//       'In Coimbatore, we focus on ultra-premium gated villas located in the fast-growing Saravanampatti corridor. Our projects feature expansive floor plans, contemporary facades, and resort-style amenities tailored for modern families.',
+//       'Every development is RERA and OC approved with complete legal clarity, ensuring peace of mind and long-term value for both homeowners and investors.'
+//     ]
+//   }
+// ];
 
-const featuredProjects = [
-  {
-    id: 'happy-elite-city',
-    name: 'Happy Elite City',
-    location: 'Oomachikulam, Madurai',
-    description:
-      'Ultra-luxury 1, 2 & 3 BHK apartments with premium amenities, skylounge, and panoramic city views.',
-    bhk: '1, 2, 3 BHK',
-    type: 'Apartments',
-    status: 'Ongoing',
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=900&h=600&fit=crop'
-  },
-  {
-    id: 'happy-green-valley',
-    name: 'Happy Green Valley',
-    location: 'Avaniyapuram, Madurai',
-    description:
-      'Premium villas in a lush, gated community featuring club-class amenities and smart home automation.',
-    bhk: '3, 4, 5 BHK',
-    type: 'Villas',
-    status: 'Ready to Move',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop'
-  },
-  {
-    id: 'happy-signature-residency',
-    name: 'Happy Signature Residency',
-    location: 'Saravanampatti, Coimbatore',
-    description:
-      'Gated community villas in the IT corridor with ultra-premium elevations and landscaped avenues.',
-    bhk: '3, 4 BHK',
-    type: 'Villas',
-    status: 'Pre-Launch',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop'
-  }
-];
+// const featuredProjects = [
+//   {
+//     id: 'happy-elite-city',
+//     name: 'Happy Elite City',
+//     location: 'Oomachikulam, Madurai',
+//     description:
+//       'Ultra-luxury 1, 2 & 3 BHK apartments with premium amenities, skylounge, and panoramic city views.',
+//     bhk: '1, 2, 3 BHK',
+//     type: 'Apartments',
+//     status: 'Ongoing',
+//     image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=900&h=600&fit=crop'
+//   },
+//   {
+//     id: 'happy-green-valley',
+//     name: 'Happy Green Valley',
+//     location: 'Avaniyapuram, Madurai',
+//     description:
+//       'Premium villas in a lush, gated community featuring club-class amenities and smart home automation.',
+//     bhk: '3, 4, 5 BHK',
+//     type: 'Villas',
+//     status: 'Ready to Move',
+//     image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop'
+//   },
+//   {
+//     id: 'happy-signature-residency',
+//     name: 'Happy Signature Residency',
+//     location: 'Saravanampatti, Coimbatore',
+//     description:
+//       'Gated community villas in the IT corridor with ultra-premium elevations and landscaped avenues.',
+//     bhk: '3, 4 BHK',
+//     type: 'Villas',
+//     status: 'Pre-Launch',
+//     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop'
+//   }
+// ];
 
-const brochurePrompts = [
-  {
-    id: 'brochure-main',
-    title: 'Get Your Brochure Now!',
-    subtitle: 'Download Instantly!'
-  },
-  {
-    id: 'happy-elite-city',
-    title: 'Happy Elite City',
-    subtitle: 'Ultra-Luxury 1, 2 and 3 BHK Apartments!'
-  },
-  {
-    id: 'happy-homes-villas',
-    title: 'Happy Homes Villas',
-    subtitle: 'Signature luxury villas & gated communities!'
-  }
-];
+// const brochurePrompts = [
+//   {
+//     id: 'brochure-main',
+//     title: 'Get Your Brochure Now!',
+//     subtitle: 'Download Instantly!'
+//   },
+//   {
+//     id: 'happy-elite-city',
+//     title: 'Happy Elite City',
+//     subtitle: 'Ultra-Luxury 1, 2 and 3 BHK Apartments!'
+//   },
+//   {
+//     id: 'happy-homes-villas',
+//     title: 'Happy Homes Villas',
+//     subtitle: 'Signature luxury villas & gated communities!'
+//   }
+// ];
 
-const keywordGroups = [
-  {
-    id: 'madurai-locations',
-    title: 'Location-Specific Villas in Madurai',
-    items: [
-      'Villas in Surya Nagar',
-      'Villas in Thuvariman',
-      'Villas in Avaniyapuram',
-      'Villas in Oomachikulam',
-      'Villas in Kochadai',
-      'Gated Community Villas Madurai'
-    ]
-  },
-  {
-    id: 'madurai-ready',
-    title: 'Ready to Move Homes in Madurai',
-    items: [
-      'Ready to Move Villas Madurai',
-      'Ready to Move Apartments Madurai',
-      'Immediate Possession Villas Madurai',
-      'Quick Possession Homes Madurai',
-      'Big Villas Madurai',
-      'New Ready Homes Madurai'
-    ]
-  },
-  {
-    id: 'madurai-luxury',
-    title: 'Luxury & Premium Properties in Madurai',
-    items: [
-      'Luxury Villas Madurai',
-      'Luxury Apartments Madurai',
-      'Premium Villas Madurai',
-      'Luxury Gated Communities Madurai',
-      'Top Luxury Properties Madurai',
-      'Exclusive Villas Madurai'
-    ]
-  },
-  {
-    id: 'coimbatore-builders',
-    title: 'Builders in Coimbatore',
-    items: [
-      'Best Builders in Coimbatore',
-      'Luxury Villa Builders Coimbatore',
-      'Villa Builders in Coimbatore',
-      'Gated Community Villa Builders',
-      'Trusted Builders in Coimbatore',
-      'Affordable Builders in Coimbatore'
-    ]
-  },
-  {
-    id: 'coimbatore-villas',
-    title: 'Villas in Coimbatore',
-    items: [
-      '4 BHK Villas in Coimbatore',
-      '5 BHK Villas in Coimbatore',
-      'Independent Villas Coimbatore',
-      'Ready-to-move Villas Coimbatore',
-      'Gated Villas Coimbatore',
-      'Villas Near Saravanampatti'
-    ]
-  },
-  {
-    id: 'coimbatore-ready',
-    title: 'Ready-to-Move Villas in Coimbatore',
-    items: [
-      'Instant Possession Villas Coimbatore',
-      'Ready Villas for Sale Coimbatore',
-      'Ready-to-Move Luxury Villas',
-      'Ready Gated Community Villas',
-      'Quick Possession Villas',
-      'Ready Villa Projects Coimbatore'
-    ]
-  }
-];
+// const keywordGroups = [
+//   {
+//     id: 'madurai-locations',
+//     title: 'Location-Specific Villas in Madurai',
+//     items: [
+//       'Villas in Surya Nagar',
+//       'Villas in Thuvariman',
+//       'Villas in Avaniyapuram',
+//       'Villas in Oomachikulam',
+//       'Villas in Kochadai',
+//       'Gated Community Villas Madurai'
+//     ]
+//   },
+//   {
+//     id: 'madurai-ready',
+//     title: 'Ready to Move Homes in Madurai',
+//     items: [
+//       'Ready to Move Villas Madurai',
+//       'Ready to Move Apartments Madurai',
+//       'Immediate Possession Villas Madurai',
+//       'Quick Possession Homes Madurai',
+//       'Big Villas Madurai',
+//       'New Ready Homes Madurai'
+//     ]
+//   },
+//   {
+//     id: 'madurai-luxury',
+//     title: 'Luxury & Premium Properties in Madurai',
+//     items: [
+//       'Luxury Villas Madurai',
+//       'Luxury Apartments Madurai',
+//       'Premium Villas Madurai',
+//       'Luxury Gated Communities Madurai',
+//       'Top Luxury Properties Madurai',
+//       'Exclusive Villas Madurai'
+//     ]
+//   },
+//   {
+//     id: 'coimbatore-builders',
+//     title: 'Builders in Coimbatore',
+//     items: [
+//       'Best Builders in Coimbatore',
+//       'Luxury Villa Builders Coimbatore',
+//       'Villa Builders in Coimbatore',
+//       'Gated Community Villa Builders',
+//       'Trusted Builders in Coimbatore',
+//       'Affordable Builders in Coimbatore'
+//     ]
+//   },
+//   {
+//     id: 'coimbatore-villas',
+//     title: 'Villas in Coimbatore',
+//     items: [
+//       '4 BHK Villas in Coimbatore',
+//       '5 BHK Villas in Coimbatore',
+//       'Independent Villas Coimbatore',
+//       'Ready-to-move Villas Coimbatore',
+//       'Gated Villas Coimbatore',
+//       'Villas Near Saravanampatti'
+//     ]
+//   },
+//   {
+//     id: 'coimbatore-ready',
+//     title: 'Ready-to-Move Villas in Coimbatore',
+//     items: [
+//       'Instant Possession Villas Coimbatore',
+//       'Ready Villas for Sale Coimbatore',
+//       'Ready-to-Move Luxury Villas',
+//       'Ready Gated Community Villas',
+//       'Quick Possession Villas',
+//       'Ready Villa Projects Coimbatore'
+//     ]
+//   }
+// ];
 
 // const dropdownTextcontent = {
 //   heading: "Best Builders in Madurai and Coimbatore for Premium Villas and Apartments",
@@ -181,21 +191,21 @@ const keywordGroups = [
 const maduraiProjects = [
   {
     id: 1,
-    name: "Jayabharath Flora",
+    name: "Happy HomesFlora",
     location: "Thuvairiman",
     bhk: "2 BHK, 3 BHK & 4 BHK",
     image: "/images/flora.jpg",
   },
   {
     id: 2,
-    name: "Jayabharath Elite City",
+    name: "Happy HomesElite City",
     location: "Surya Nagar",
     bhk: "2 BHK, 3 BHK, 4 BHK & 5 BHK",
     image: "/images/elitecity.jpg",
   },
   {
     id: 3,
-    name: "Jayabharath Oscar City",
+    name: "Happy HomesOscar City",
     location: "Umachikulam",
     bhk: "1 BHK, 2 BHK, 3 BHK, 4 BHK & 5 BHK",
     image: "/images/oscarcity.jpg",
@@ -205,51 +215,228 @@ const maduraiProjects = [
 const coimbatoreProjects = [
   {
     id: 4,
-    name: "Jayabharath Twin Tower",
+    name: "Happy HomesTwin Tower",
     location: "Surya Nagar",
     bhk: "1 BHK, 2 BHK, 3 BHK Apartments",
     image: "/images/twintower.jpg",
   },
   {
     id: 5,
-    name: "Jayabharath Green City",
+    name: "Happy HomesGreen City",
     location: "Avaniyapuram",
     bhk: "2 BHK & 3 BHK",
     image: "/images/greencity.jpg",
   },
   {
     id: 6,
-    name: "Jayabharath River City",
+    name: "Happy HomesRiver City",
     location: "Thuvairiman",
     bhk: "Land & Plot",
     image: "/images/rivercity.jpg",
   },
 ];
 
+const cards = [
+    {
+      title: "Experienced Team",
+      description:
+        "At Happy Homes, we are recognized as the best builders in Madurai with over 32 years of expertise in the industry. As top builders in Madurai, we bring unparalleled knowledge and craftsmanship to every project. Our experienced team is dedicated to delivering the finest luxury villas in Madurai and properties in Madurai. As promoters in Madurai, we ensure every home is built with care, making sure your investment is in safe hands.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          className="icon"
+        >
+          <path
+            d="M256 16C123.5 16 16 123.5 16 256s107.5 240 240 240 240-107.5 240-240S388.5 16 256 16zm0 432c-105.9 0-192-86.1-192-192S150.1 64 256 64s192 86.1 192 192-86.1 192-192 192z"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="15"
+          />
+          <circle
+            cx="256"
+            cy="200"
+            r="56"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="15"
+          />
+          <path
+            d="M352 384a96 96 0 0 0-192 0"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="15"
+            strokeLinecap="round"
+          />
+        </svg>
+      ),
+    },
+    {
+      title: "Quality Construction",
+      description:
+        "As the best builders in Madurai, we are known for our commitment to quality construction. Our focus is on creating durable, stylish homes that stand the test of time. Whether you're looking for luxury villas in Madurai or properties in Madurai, we use top-tier materials and advanced building techniques to ensure your home is crafted with the highest standards. We are proud to be among the leading top builders in Madurai, ensuring each of our homes is a true testament to quality.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          className="icon"
+        >
+          <path
+            d="M256 32L32 160v64h32v192h128V288h128v128h128V224h32v-64L256 32z"
+            fill="currentColor"
+          />
+        </svg>
+      ),
+    },
+    {
+      title: "Customer Satisfaction",
+      description:
+        "At Happy Homes, customer satisfaction is our top priority. As trusted builders in Madurai, we ensure every step of your home-buying journey is transparent and hassle-free. From planning to handover, our team focuses on delivering excellence and exceeding expectations. Our reputation as the best builders in Madurai comes from our clients’ trust and happiness, making every project a proud milestone.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          className="icon"
+        >
+          <path
+            d="M256 32C132.3 32 32 132.3 32 256s100.3 224 224 224 224-100.3 224-224S379.7 32 256 32z"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="15"
+          />
+          <path
+            d="M176 208c8.8 0 16-7.2 16-16s-7.2-16-16-16-16 7.2-16 16 7.2 16 16 16zm160 0c8.8 0 16-7.2 16-16s-7.2-16-16-16-16 7.2-16 16 7.2 16 16 16zm-160 64c22.1 26.5 53.3 40 80 40s57.9-13.5 80-40"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="15"
+            strokeLinecap="round"
+          />
+        </svg>
+      ),
+    },
+  ];
 
-  
+
+
+
+// export default Home;
+
+ 
 const Home = () => {
-  const [showEnquiryForm, setShowEnquiryForm] = useState(false);
-  // const [isOpen, setIsOpen] = useState(false);
-const [activeTab, setActiveTab] = useState("Madurai");
+//     // const [showPopup, setShowPopup] = useState(false);
 
-  const projects =
-    activeTab === "Madurai" ? maduraiProjects : coimbatoreProjects;
+//   // useEffect(() => {
+//     // Check localStorage if popup was already shown
+//   //   const hasSeenPopup = localStorage.getItem("popupShown");
+//   //   if (!hasSeenPopup) {
+//   //     setShowPopup(true);
+//   //   }
+//   // }, []);
 
-  // const handleHeroSubmit = event => {
-  //   event.preventDefault();
-  //   setShowEnquiryForm(true);
-  // };
+//   // const handleClosePopup = () => {
+//   //   setShowPopup(false);
+//   //   localStorage.setItem("popupShown", "true");
+//   // };
+//   const [showEnquiryForm, setShowEnquiryForm] = useState(false);
+//   // const [isOpen, setIsOpen] = useState(false);
+// const [activeTab, setActiveTab] = useState("Madurai");
+
+//   const projects =
+//     activeTab === "Madurai" ? maduraiProjects : coimbatoreProjects;
+
+//   // const handleHeroSubmit = event => {
+//   //   event.preventDefault();
+//   //   setShowEnquiryForm(true);
+//   // };
+
+//   // const [showPopup, setShowPopup] = useState(false);
+
+//   useEffect(() => {
+//     // Always show popup after short delay
+//     const timer = setTimeout(() => setShowPopup(true), 500);
+//     return () => clearTimeout(timer);
+//   }, []);
+
+//   // const handleClosePopup = () => {
+//   //   setShowPopup(false);
+//   // };
+
+//    const [showPopup, setShowPopup] = useState(true); // show on every reload
+
+//   const handleClose = () => {
+//     console.log("Close button clicked"); // ✅ Debug line
+//     setShowPopup(false);
+//   };
+
+
+
+
+
+
+
+  const [showPopup, setShowPopup] = useState(false);
+  // const [showEnquiryForm, setShowEnquiryForm] = useState(false);
+  const [activeTab, setActiveTab] = useState("Madurai");
+
+  // const maduraiProjects = ["Villa A", "Villa B"];
+  // const coimbatoreProjects = ["Apartment X", "Apartment Y"];
+  const projects = activeTab === "Madurai" ? maduraiProjects : coimbatoreProjects;
+ // Show popup automatically after short delay
+  useEffect(() => {
+    const timer = setTimeout(() => setShowPopup(true), 500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Close popup
+  const handleClose = () => {
+    console.log("❌ Popup closed");
+    setShowPopup(false);
+  };
+
+
+
+
+
 
   return (
+    
+
     <div className="home">
-      <section
+
+             {/* ✅ Popup appears here */}
+      {showPopup && <PopupFormLatest onClose={handleClose} />}
+
+          {/* <div>
+      {showPopup && <PopupForm onClose={handleClosePopup} />}
+
+      <main
+        style={{
+          opacity: showPopup ? 0.3 : 1,
+          transition: "opacity 0.3s ease",
+        }}
+      >
+        <h1>Welcome to Happy Homes</h1>
+        <p>Explore premium villas and apartments in Madurai.</p>
+      </main>
+    </div> */}
+          {/* <div> */}
+      {/* Popup before page content */}
+      {/* {showPopup && <Popup onClose={handleClosePopup} />} */}
+
+      {/* Main homepage content */}
+      {/* <section style={{ opacity: showPopup ? 0.3 : 1, transition: "opacity 0.3s ease" }}>
+        <h1>Welcome to Happy Homes</h1>
+        <p>Explore premium residential projects, luxury villas, and gated communities.</p>
+      </section>
+    </div> */}
+
+      {/* <section
         className="hero-section"
         style={{ backgroundImage: `url(${heroBackground})` }}
       >
         <div className="hero-overlay">
           <div className="container hero-container">
-            {/* <div className="hero-content">
+             <div className="hero-content">
               <span className="hero-badge">Since 1993</span>
               <h1>Happy Homes — No. 1 Builders in Madurai</h1>
               <p className="hero-subtitle">
@@ -273,9 +460,9 @@ const [activeTab, setActiveTab] = useState("Madurai");
                   </div>
                 ))}
               </div>
-            </div> */}
+            </div> 
 
-            {/* <form className="hero-form" onSubmit={handleHeroSubmit}>
+             <form className="hero-form" onSubmit={handleHeroSubmit}>
               <h3>Let’s Build Your Home — Together</h3>
               <p className="hero-form-subtitle">2, 3, 4 &amp; 5 BHK Villas and Apartments!</p>
               <div className="form-group">
@@ -294,15 +481,18 @@ const [activeTab, setActiveTab] = useState("Madurai");
                 Submit
               </button>
               <p className="privacy-note">🔒 We respect your privacy. Your details are safe with us.</p>
-            </form> */}
+            </form> 
           </div>
         </div>
-      </section>
+      </section> */}
+
+<HomeCarousel />
+      <TypingHeading />
       
      <section className="bestbuilder-section">
         <div className="container bestbuilder-grid" >
-           <h1 className="animate-bestbuilder-one">Best Builders in Madurai - <span className="bestbuilder-span">Happy homes</span></h1>
-           <h1 className="animate-bestbuilder-two">Best Builders in Madurai - <span className="bestbuilder-span">Since 1993</span> </h1>
+           {/* <h1 className="animate-bestbuilder-one">Best Builders in Madurai - <span className="bestbuilder-span">Happy homes</span></h1>
+           <h1 className="animate-bestbuilder-two">Best Builders in Madurai - <span className="bestbuilder-span">Since 1993</span> </h1> */}
            <p>Best Builders in Madurai for Dream Villas: With 32+ years of expertise and 5000+ homes built, Happy Homes Homes stands as the best builders in Madurai, delivering top-tier luxury villas in Madurai and premium properties in Madurai. As one of the top builders in Madurai, we take pride in our meticulous craftsmanship, innovation, and commitment to excellence. Our reputation as a trusted construction company in Madurai and leading promoters in Madurai makes us the go-to choice for those seeking new villa projects in Madurai. If you’re searching for builders in Madurai who deliver quality, precision, and reliability, Happy Homes Homes the top builders in madurai is your answer. Whether it’s house construction companies, apartment builders in Madurai, or premium housing projects in Madurai, we are committed to turning your dream home into reality</p>
           
           {/* {overviewContent.map(item => (
@@ -360,7 +550,7 @@ const [activeTab, setActiveTab] = useState("Madurai");
  
     <section className="projects-section">
       <h2 className="section-title">
-        Exclusive Ongoing Projects Of Jayabharath Best Builders In Madurai
+        Exclusive Ongoing Projects Of Happy HomesBest Builders In Madurai
       </h2>
 
       <div className="tabs">
@@ -405,8 +595,118 @@ const [activeTab, setActiveTab] = useState("Madurai");
 
 {/* Card Section End */}
 
+<DropdownAccordion />
+<ImageCarousel />
+{/* <PopupForm /> */}
+<DropdownAccordion />
 
-      <section className="overview-section">
+
+{/* Why Choose Us */}
+
+    <section className="whychooseus-section">
+      <div className="whychooseus-container">
+        {/* Left Section: Content */}
+        <div className="whychooseus-content">
+          <h2 className="whychooseus-title">Why choose us</h2>
+
+          <div className="divider"></div>
+
+          <h3 className="headline">
+            <span>Premium Villas and Apartments by the </span>
+            <span className="rotating-text">Best Builders in Madurai</span>
+          </h3>
+
+          <p>
+            Since 1993, we have devoted 30 years to excellence, becoming one of
+            the{" "}
+            <a
+              href="https://jayabharath.com/enquire-now-jayabharath-homes/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              top builders in Madurai
+            </a>
+            . Specializing in luxury villas in Madurai, we ensure that every
+            home we build meets the highest standards of quality and
+            craftsmanship. As the best builders in Madurai, we also focus on
+            creating secure gated communities and premium properties in Madurai
+            that cater to your lifestyle.
+          </p>
+
+          <p>
+            Our role as promoters in Madurai allows us to guide you through the
+            process of finding your perfect home, equipped with modern amenities
+            and designed with your comfort in mind.
+          </p>
+
+          <div className="button-wrapper">
+            <a
+              href="https://jayabharath.com/media/"
+              className="more-button"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg
+                viewBox="0 0 192 512"
+                xmlns="http://www.w3.org/2000/svg"
+                className="arrow-icon"
+              >
+                <path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path>
+              </svg>
+              <span>More About Us</span>
+            </a>
+          </div>
+        </div>
+
+        {/* Right Section (Empty for Background / Image use) */}
+        <div className="whychooseus-right">
+          <img src= {buildimg}  alt="" />
+        </div>
+      </div>
+    </section>
+
+{/* Card Section */}
+
+  
+
+    <section className="experience-section">
+      <div className="experience-container">
+        {cards.map((card, index) => (
+          <div className="experience-card" key={index}>
+            <div className="icon-wrapper">{card.icon}</div>
+            <h3 className="card-title">{card.title}</h3>
+            <p className="card-description">{card.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+
+
+
+
+
+
+{/* Gallery Section */}
+
+<GallerySection />
+<Testimonial />
+
+<LocationAccordion />
+
+<MapSection />
+
+<SocialIcons />
+
+<FooterJB />
+
+
+
+
+
+
+
+      {/* <section className="overview-section">
         <div className="container overview-grid">
           {overviewContent.map(item => (
             <div key={item.id} className="overview-card">
@@ -494,9 +794,9 @@ const [activeTab, setActiveTab] = useState("Madurai");
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {showEnquiryForm && <EnquiryForm onClose={() => setShowEnquiryForm(false)} />}
+      {/* {showEnquiryForm && <EnquiryForm onClose={() => setShowEnquiryForm(false)} />} */}
     </div>
   );
 };

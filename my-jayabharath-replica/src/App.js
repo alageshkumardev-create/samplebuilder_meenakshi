@@ -26,7 +26,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutUs />} />
+          {/* <Route path="/about" element={<AboutUs />} />
           <Route path="/founder" element={<Founder />} />
           <Route path="/leadership" element={<Leadership />} />
           <Route path="/completed-projects" element={<CompletedProjects />} />
@@ -37,8 +37,8 @@ function App() {
           <Route path="/project/:id" element={<ProjectDetail />} />
           <Route path="/media" element={<Media />} />
           <Route path="/investors" element={<Investors />} />
+          <Route path="/contact" element={<Contact />} /> */}
           <Route path="/careers" element={<Careers />} />
-          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>

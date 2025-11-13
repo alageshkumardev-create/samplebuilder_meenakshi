@@ -3,7 +3,7 @@ import "./Accordion.css"; // include the above CSS
 
 export default function CustomAccordion() {
   return (
-    <section className="accordion-section d-flex justify-content-center mt-4">
+    <section className="accordion-section d-flex justify-content-center ">
       <div className="accordion-wrapper">
         <details>
           <summary className="accordion-header d-flex align-items-center justify-content-between">
