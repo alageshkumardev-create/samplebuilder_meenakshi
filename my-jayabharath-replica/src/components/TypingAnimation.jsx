@@ -1,47 +1,41 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import "./TypingAnimation.css";
 
-const TypingHeading = () => {
-  const words = ["Happy Homes", "Since 1993"];
-  const [currentWord, setCurrentWord] = useState("");
-  const [wordIndex, setWordIndex] = useState(0);
+const TypingAnimation = () => {
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const [typingSpeed, setTypingSpeed] = useState(120);
+
+  // ✅ useMemo ensures the array isn't re-created every render
+  const words = useMemo(() => ["Happy Homes", "Since 1993"], []);
 
   useEffect(() => {
-    const fullWord = words[wordIndex];
+    const currentWord = words[currentWordIndex];
+    let typingSpeed = isDeleting ? 80 : 150;
 
-    const handleTyping = () => {
-      if (isDeleting) {
-        // deleting
-        setCurrentWord((prev) => prev.slice(0, -1));
-        setTypingSpeed(60);
-      } else {
-        // typing
-        setCurrentWord((prev) => fullWord.slice(0, prev.length + 1));
-        setTypingSpeed(120);
-      }
-
-      // switch between typing and deleting
-      if (!isDeleting && currentWord === fullWord) {
-        setTimeout(() => setIsDeleting(true), 1500);
-      } else if (isDeleting && currentWord === "") {
+    const type = () => {
+      if (!isDeleting && displayText.length < currentWord.length) {
+        setDisplayText(currentWord.slice(0, displayText.length + 1));
+      } else if (isDeleting && displayText.length > 0) {
+        setDisplayText(currentWord.slice(0, displayText.length - 1));
+      } else if (!isDeleting && displayText.length === currentWord.length) {
+        setTimeout(() => setIsDeleting(true), 1000);
+      } else if (isDeleting && displayText === "") {
         setIsDeleting(false);
-        setWordIndex((prev) => (prev + 1) % words.length);
+        setCurrentWordIndex((prev) => (prev + 1) % words.length);
       }
     };
 
-    const timer = setTimeout(handleTyping, typingSpeed);
+    const timer = setTimeout(type, typingSpeed);
     return () => clearTimeout(timer);
-  }, [currentWord, isDeleting, typingSpeed, wordIndex, words]);
+  }, [displayText, isDeleting, currentWordIndex, words]);
 
   return (
     <h1 className="typing-heading">
-      Best Builders in Madurai -{" "}
-      <span className="typing-span">{currentWord}</span>
+      Best Builders in Madurai - <span className="typing-span">{displayText}</span>
       <span className="cursor">|</span>
     </h1>
   );
 };
 
-export default TypingHeading;
+export default TypingAnimation;

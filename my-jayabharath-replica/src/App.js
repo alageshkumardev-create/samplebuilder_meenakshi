@@ -5,19 +5,19 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 // import Accordion  from './components/Accordion';
 import Home from './pages/Home';
-import AboutUs from './pages/AboutUs';
-import Founder from './pages/Founder';
-import Leadership from './pages/Leadership';
-import CompletedProjects from './pages/CompletedProjects';
-import Services from './pages/Services';
-import Testimonials from './pages/Testimonials';
-import Blog from './pages/Blog';
-import OngoingProjects from './pages/OngoingProjects';
-import ProjectDetail from './pages/ProjectDetail';
-import Media from './pages/Media';
-import Investors from './pages/Investors';
+// import AboutUs from './pages/AboutUs';
+// import Founder from './pages/Founder';
+// import Leadership from './pages/Leadership';
+// import CompletedProjects from './pages/CompletedProjects';
+// import Services from './pages/Services';
+// import Testimonials from './pages/Testimonials';
+// import Blog from './pages/Blog';
+// import OngoingProjects from './pages/OngoingProjects';
+// import ProjectDetail from './pages/ProjectDetail';
+// import Media from './pages/Media';
+// import Investors from './pages/Investors';
 import Careers from './pages/Careers';
-import Contact from './pages/Contact';
+// import Contact from './pages/Contact';
 
 function App() {
   return (
