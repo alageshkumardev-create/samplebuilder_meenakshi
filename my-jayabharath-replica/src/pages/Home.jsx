@@ -18,6 +18,9 @@ import FooterJB from '../components/FooterJB';
 import TypingHeading from '../components/TypingAnimation';
 // import Popup from "../components/PopUp";
 import HomeCarousel from '../components/HomeCarousel'
+import buildingimage from '../asset/building image.webp'
+import buildingimage1 from '../asset/building image 001.webp'
+import buildingimage2 from '../asset/building image 002.webp'
 
 
 
@@ -194,21 +197,21 @@ const maduraiProjects = [
     name: "Happy HomesFlora",
     location: "Thuvairiman",
     bhk: "2 BHK, 3 BHK & 4 BHK",
-    image: "/images/flora.jpg",
+    image: buildingimage,
   },
   {
     id: 2,
     name: "Happy HomesElite City",
     location: "Surya Nagar",
     bhk: "2 BHK, 3 BHK, 4 BHK & 5 BHK",
-    image: "/images/elitecity.jpg",
+    image: buildingimage1,
   },
   {
     id: 3,
     name: "Happy HomesOscar City",
     location: "Umachikulam",
     bhk: "1 BHK, 2 BHK, 3 BHK, 4 BHK & 5 BHK",
-    image: "/images/oscarcity.jpg",
+    image: buildingimage2,
   },
 ];
 
@@ -218,21 +221,21 @@ const coimbatoreProjects = [
     name: "Happy HomesTwin Tower",
     location: "Surya Nagar",
     bhk: "1 BHK, 2 BHK, 3 BHK Apartments",
-    image: "/images/twintower.jpg",
+    image: buildingimage,
   },
   {
     id: 5,
     name: "Happy HomesGreen City",
     location: "Avaniyapuram",
     bhk: "2 BHK & 3 BHK",
-    image: "/images/greencity.jpg",
+    image: buildingimage2,
   },
   {
     id: 6,
     name: "Happy HomesRiver City",
     location: "Thuvairiman",
     bhk: "Land & Plot",
-    image: "/images/rivercity.jpg",
+    image: buildingimage1,
   },
 ];
 
