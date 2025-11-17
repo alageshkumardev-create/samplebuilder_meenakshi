@@ -1,5 +1,6 @@
 import React from 'react';
 import './Careers.css';
+import headerBg from '../asset/CareersectionBG.webp'
 
 const Careers = () => {
   const jobOpenings = [
@@ -49,7 +50,7 @@ const Careers = () => {
 
   return (
     <div className="careers-page">
-      <div className="page-header">
+      <div className="page-header" style={{ backgroundImage: `url(${headerBg})` }}>
         <div className="container">
           <h1>Careers</h1>
           <p>Join Our Team and Build the Future</p>

@@ -70,14 +70,16 @@
   background: #f9f9f9;
   border: 2px dashed #ddd;
   border-radius: 10px;
-  padding: 4rem 2rem;
+  /* padding: 4rem 2rem; */
   text-align: center;
   color: #999;
+  margin-bottom: 50px;
 }
+
 
 .map-placeholder p:first-child {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 
 .map-note {

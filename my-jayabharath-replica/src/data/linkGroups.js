@@ -16,16 +16,21 @@ export const informationLinkGroups = [
     id: 'location-specific-madurai',
     title: 'Location-Specific Villas in Madurai',
     items: [
-      'Villas in Surya Nagar',
-      'Villas in Thuvariman',
-      'Villas in Avaniyapuram',
-      'Villas in Oomachikulam',
-      'Villas in Kochadai',
-      'Gated Community Villas Madurai',
-      'Independent Villas Madurai',
-      'Luxury Villas in Madurai',
-      'New Villa Projects in Madurai',
-      'Budget Villas in Madurai'
+      'Villas in Surya Garden-1 (Parashakthi Nagar)',
+      'Villas in Surya Garden-2 (Thiruparankundram)',
+      'Villas & Plots in Surya Garden-3 (Kamarajar Nagar)',
+      'Villas in Surya Garden-4 (Thillai Nagar)',
+      'Plots in Surya Garden-5 (Karisalkulam)',
+      'Villas in D-mart',
+      // 'Villas in Thuvariman',
+      // 'Villas in Avaniyapuram',
+      // 'Villas in Oomachikulam',
+      // 'Villas in Kochadai',
+      // 'Gated Community Villas Madurai',
+      // 'Independent Villas Madurai',
+      // 'Luxury Villas in Madurai',
+      // 'New Villa Projects in Madurai',
+      // 'Budget Villas in Madurai'
     ]
   },
   {
@@ -75,131 +80,131 @@ export const informationLinkGroups = [
       'Budget Friendly Villas Madurai'
     ]
   },
-  {
-    id: 'builders-coimbatore',
-    title: 'Builders in Coimbatore',
-    items: [
-      'Builders in Coimbatore',
-      'Best Builders in Coimbatore',
-      'Top Builders in Coimbatore',
-      'Leading Builders in Coimbatore',
-      'Affordable Builders in Coimbatore',
-      'Luxury Villa Builders Coimbatore',
-      'Villa Builders in Coimbatore',
-      'Best Builders for Villas in Coimbatore',
-      'Builders for Gated Community Villas Coimbatore',
-      'Trusted Builders in Coimbatore'
-    ]
-  },
-  {
-    id: 'villas-coimbatore',
-    title: 'Villas in Coimbatore',
-    items: [
-      'Buy 3 BHK Villas in Coimbatore',
-      '3 BHK Villas in Coimbatore',
-      '4 BHK Villas in Coimbatore',
-      '5 BHK Villas in Coimbatore',
-      'Luxury Villas in Coimbatore',
-      'Gated Community Villas in Coimbatore',
-      'Independent Villas in Coimbatore',
-      'New Villas in Coimbatore',
-      'Ready-to-move Villas Coimbatore',
-      'Villas for Sale in Coimbatore'
-    ]
-  },
-  {
-    id: 'gated-villas-coimbatore',
-    title: 'Gated Community Villas in Coimbatore',
-    items: [
-      'Gated Community Villas Coimbatore',
-      'Luxury Gated Villas Coimbatore',
-      'New Gated Community Villas Coimbatore',
-      'Gated Villas for Sale Coimbatore',
-      'Best Gated Villas Coimbatore',
-      'Secure Gated Villas Coimbatore',
-      'Gated Villa Projects Coimbatore',
-      'Gated Villa Communities Coimbatore',
-      'Premium Gated Villas Coimbatore',
-      'Top Gated Villas Builders Coimbatore'
-    ]
-  },
-  {
-    id: 'villa-projects-coimbatore',
-    title: 'Villa Projects in Coimbatore',
-    items: [
-      'Villa Projects in Coimbatore',
-      'New Villa Projects Coimbatore',
-      'Coimbatore Villa Projects Near Saravanampatti',
-      'Luxury Villa Projects Coimbatore',
-      'Affordable Villa Projects Coimbatore',
-      'Ready-to-move Villa Projects Coimbatore',
-      'Upcoming Villa Projects Coimbatore',
-      'Best Villa Projects Coimbatore',
-      'Premium Villa Projects Coimbatore',
-      'Villa Project Developers Coimbatore'
-    ]
-  },
-  {
-    id: 'independent-coimbatore',
-    title: 'Independent Houses in Coimbatore',
-    items: [
-      'Independent House for Sale Coimbatore',
-      'Best Independent House Builders Coimbatore',
-      'Independent Houses Near Saravanampatti',
-      'Ready to Move Independent Houses Coimbatore',
-      'Luxury Independent Houses Coimbatore',
-      'New Independent Houses Coimbatore',
-      'Independent House Builders'
-    ]
-  },
-  {
-    id: 'ready-villas-coimbatore',
-    title: 'Ready-to-Move Villas in Coimbatore',
-    items: [
-      'Ready-to-Move Villas Coimbatore',
-      'Ready Villas for Sale Coimbatore',
-      'Immediate Possession Villas Coimbatore',
-      'Ready-to-Move Luxury Villas Coimbatore',
-      'Ready Villas in Saravanampatti',
-      'Ready-to-Move Gated Villas Coimbatore',
-      'Instant Possession Villas Coimbatore',
-      'Quick Possession Villas Coimbatore',
-      'Ready-to-Move Independent Villas Coimbatore',
-      'Ready Villa Projects Coimbatore'
-    ]
-  },
-  {
-    id: 'luxury-coimbatore',
-    title: 'Luxury Villas & Homes in Coimbatore',
-    items: [
-      'Luxury Villas Coimbatore',
-      'Luxury Villas for Sale Coimbatore',
-      'Luxury Homes Builders Coimbatore',
-      'Premium Villas Coimbatore',
-      'Top Luxury Villa Builders Coimbatore',
-      'Exclusive Villas Coimbatore',
-      'Luxury Villas with Pool Coimbatore',
-      'High-end Villas Coimbatore',
-      'Luxury Villa Projects Coimbatore',
-      'Luxury Residential Villas Coimbatore'
-    ]
-  },
-  {
-    id: 'buy-villas-coimbatore',
-    title: 'Buy Villas in Coimbatore',
-    items: [
-      'Buy Villa Coimbatore',
-      'Buy Villas Near Saravanampatti',
-      'Buy Luxury Villas Coimbatore',
-      'Buy Independent Villas Coimbatore',
-      'Buy Gated Community Villas Coimbatore',
-      'Best Places to Buy Villas Coimbatore',
-      'Affordable Villas to Buy Coimbatore',
-      'New Villas for Sale Coimbatore',
-      'Buy Ready-to-Move Villas Coimbatore',
-      'Villa Buying Guide Coimbatore'
-    ]
-  },
+  // {
+  //   id: 'builders-coimbatore',
+  //   title: 'Builders in Coimbatore',
+  //   items: [
+  //     'Builders in Coimbatore',
+  //     'Best Builders in Coimbatore',
+  //     'Top Builders in Coimbatore',
+  //     'Leading Builders in Coimbatore',
+  //     'Affordable Builders in Coimbatore',
+  //     'Luxury Villa Builders Coimbatore',
+  //     'Villa Builders in Coimbatore',
+  //     'Best Builders for Villas in Coimbatore',
+  //     'Builders for Gated Community Villas Coimbatore',
+  //     'Trusted Builders in Coimbatore'
+  //   ]
+  // },
+  // {
+  //   id: 'villas-coimbatore',
+  //   title: 'Villas in Coimbatore',
+  //   items: [
+  //     'Buy 3 BHK Villas in Coimbatore',
+  //     '3 BHK Villas in Coimbatore',
+  //     '4 BHK Villas in Coimbatore',
+  //     '5 BHK Villas in Coimbatore',
+  //     'Luxury Villas in Coimbatore',
+  //     'Gated Community Villas in Coimbatore',
+  //     'Independent Villas in Coimbatore',
+  //     'New Villas in Coimbatore',
+  //     'Ready-to-move Villas Coimbatore',
+  //     'Villas for Sale in Coimbatore'
+  //   ]
+  // },
+  // {
+  //   id: 'gated-villas-coimbatore',
+  //   title: 'Gated Community Villas in Coimbatore',
+  //   items: [
+  //     'Gated Community Villas Coimbatore',
+  //     'Luxury Gated Villas Coimbatore',
+  //     'New Gated Community Villas Coimbatore',
+  //     'Gated Villas for Sale Coimbatore',
+  //     'Best Gated Villas Coimbatore',
+  //     'Secure Gated Villas Coimbatore',
+  //     'Gated Villa Projects Coimbatore',
+  //     'Gated Villa Communities Coimbatore',
+  //     'Premium Gated Villas Coimbatore',
+  //     'Top Gated Villas Builders Coimbatore'
+  //   ]
+  // },
+  // {
+  //   id: 'villa-projects-coimbatore',
+  //   title: 'Villa Projects in Coimbatore',
+  //   items: [
+  //     'Villa Projects in Coimbatore',
+  //     'New Villa Projects Coimbatore',
+  //     'Coimbatore Villa Projects Near Saravanampatti',
+  //     'Luxury Villa Projects Coimbatore',
+  //     'Affordable Villa Projects Coimbatore',
+  //     'Ready-to-move Villa Projects Coimbatore',
+  //     'Upcoming Villa Projects Coimbatore',
+  //     'Best Villa Projects Coimbatore',
+  //     'Premium Villa Projects Coimbatore',
+  //     'Villa Project Developers Coimbatore'
+  //   ]
+  // },
+  // {
+  //   id: 'independent-coimbatore',
+  //   title: 'Independent Houses in Coimbatore',
+  //   items: [
+  //     'Independent House for Sale Coimbatore',
+  //     'Best Independent House Builders Coimbatore',
+  //     'Independent Houses Near Saravanampatti',
+  //     'Ready to Move Independent Houses Coimbatore',
+  //     'Luxury Independent Houses Coimbatore',
+  //     'New Independent Houses Coimbatore',
+  //     'Independent House Builders'
+  //   ]
+  // },
+  // {
+  //   id: 'ready-villas-coimbatore',
+  //   title: 'Ready-to-Move Villas in Coimbatore',
+  //   items: [
+  //     'Ready-to-Move Villas Coimbatore',
+  //     'Ready Villas for Sale Coimbatore',
+  //     'Immediate Possession Villas Coimbatore',
+  //     'Ready-to-Move Luxury Villas Coimbatore',
+  //     'Ready Villas in Saravanampatti',
+  //     'Ready-to-Move Gated Villas Coimbatore',
+  //     'Instant Possession Villas Coimbatore',
+  //     'Quick Possession Villas Coimbatore',
+  //     'Ready-to-Move Independent Villas Coimbatore',
+  //     'Ready Villa Projects Coimbatore'
+  //   ]
+  // },
+  // {
+  //   id: 'luxury-coimbatore',
+  //   title: 'Luxury Villas & Homes in Coimbatore',
+  //   items: [
+  //     'Luxury Villas Coimbatore',
+  //     'Luxury Villas for Sale Coimbatore',
+  //     'Luxury Homes Builders Coimbatore',
+  //     'Premium Villas Coimbatore',
+  //     'Top Luxury Villa Builders Coimbatore',
+  //     'Exclusive Villas Coimbatore',
+  //     'Luxury Villas with Pool Coimbatore',
+  //     'High-end Villas Coimbatore',
+  //     'Luxury Villa Projects Coimbatore',
+  //     'Luxury Residential Villas Coimbatore'
+  //   ]
+  // },
+  // {
+  //   id: 'buy-villas-coimbatore',
+  //   title: 'Buy Villas in Coimbatore',
+  //   items: [
+  //     'Buy Villa Coimbatore',
+  //     'Buy Villas Near Saravanampatti',
+  //     'Buy Luxury Villas Coimbatore',
+  //     'Buy Independent Villas Coimbatore',
+  //     'Buy Gated Community Villas Coimbatore',
+  //     'Best Places to Buy Villas Coimbatore',
+  //     'Affordable Villas to Buy Coimbatore',
+  //     'New Villas for Sale Coimbatore',
+  //     'Buy Ready-to-Move Villas Coimbatore',
+  //     'Villa Buying Guide Coimbatore'
+  //   ]
+  // },
   {
     id: 'house-sale-madurai',
     title: 'House for Sale in Madurai',
@@ -216,36 +221,36 @@ export const informationLinkGroups = [
       'House for sale Thuvariman'
     ]
   },
-  {
-    id: 'house-sale-coimbatore',
-    title: 'House for Sale in Coimbatore',
-    items: [
-      'House for sale in Coimbatore',
-      'New house for sale in Coimbatore',
-      'Independent house for sale',
-      'Individual house for sale',
-      'Ready to move house in Coimbatore',
-      'Buy house in Coimbatore',
-      'House for sale Saravanampatti',
-      'House for sale Coimbatore',
-      'House for sale near me'
-    ]
-  },
-  {
-    id: 'houses-3-4-coimbatore',
-    title: '3 & 4 BHK Houses',
-    items: [
-      '4 BHK Villas in Coimbatore for Sale',
-      '4 BHK Villa for sale in Coimbatore',
-      '4 BHK House for sale in Coimbatore',
-      'Buy 4 BHK Villas in Coimbatore',
-      'Buy 3 & 4 BHK Villas / Row House for Sale in Coimbatore',
-      '4 BHK Houses in Coimbatore',
-      '4 BHK Independent House in Coimbatore for Sale',
-      '4 BHK Houses/Villas in Coimbatore',
-      '3 BHK and 4 BHK Villas in Coimbatore'
-    ]
-  },
+  // {
+  //   id: 'house-sale-coimbatore',
+  //   title: 'House for Sale in Coimbatore',
+  //   items: [
+  //     'House for sale in Coimbatore',
+  //     'New house for sale in Coimbatore',
+  //     'Independent house for sale',
+  //     'Individual house for sale',
+  //     'Ready to move house in Coimbatore',
+  //     'Buy house in Coimbatore',
+  //     'House for sale Saravanampatti',
+  //     'House for sale Coimbatore',
+  //     'House for sale near me'
+  //   ]
+  // },
+  // {
+  //   id: 'houses-3-4-coimbatore',
+  //   title: '3 & 4 BHK Houses',
+  //   items: [
+  //     '4 BHK Villas in Coimbatore for Sale',
+  //     '4 BHK Villa for sale in Coimbatore',
+  //     '4 BHK House for sale in Coimbatore',
+  //     'Buy 4 BHK Villas in Coimbatore',
+  //     'Buy 3 & 4 BHK Villas / Row House for Sale in Coimbatore',
+  //     '4 BHK Houses in Coimbatore',
+  //     '4 BHK Independent House in Coimbatore for Sale',
+  //     '4 BHK Houses/Villas in Coimbatore',
+  //     '3 BHK and 4 BHK Villas in Coimbatore'
+  //   ]
+  // },
   {
     id: 'houses-3-4-madurai',
     title: '3 & 4 BHK Houses / Villas for Sale in Madurai',
@@ -278,20 +283,20 @@ export const informationLinkGroups = [
       '2 BHK Flats for Sale in Madurai Avaniyapuram'
     ]
   },
-  {
-    id: 'row-houses-coimbatore',
-    title: 'Row Houses for Sale in Coimbatore',
-    items: [
-      'Gated Community Row Villas in Coimbatore',
-      'Compact Villas for Sale in Coimbatore',
-      'Buy Row House in Coimbatore',
-      'Row Villas in Coimbatore Saravanampatti',
-      'Affordable Row Houses in Coimbatore',
-      'Luxury Row Villas in Coimbatore',
-      '2 & 3 BHK Row Houses in Coimbatore',
-      'Individual Row Houses for Sale in Coimbatore',
-      'Ready to Move Row Houses in Coimbatore'
-    ]
-  }
+  // {
+  //   id: 'row-houses-coimbatore',
+  //   title: 'Row Houses for Sale in Coimbatore',
+  //   items: [
+  //     'Gated Community Row Villas in Coimbatore',
+  //     'Compact Villas for Sale in Coimbatore',
+  //     'Buy Row House in Coimbatore',
+  //     'Row Villas in Coimbatore Saravanampatti',
+  //     'Affordable Row Houses in Coimbatore',
+  //     'Luxury Row Villas in Coimbatore',
+  //     '2 & 3 BHK Row Houses in Coimbatore',
+  //     'Individual Row Houses for Sale in Coimbatore',
+  //     'Ready to Move Row Houses in Coimbatore'
+  //   ]
+  // }
 ];
 

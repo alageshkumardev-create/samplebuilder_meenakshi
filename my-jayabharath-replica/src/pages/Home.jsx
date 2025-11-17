@@ -191,53 +191,74 @@ import buildingimage2 from '../asset/building image 002.webp'
   ];
 
 
-const maduraiProjects = [
-  {
-    id: 1,
-    name: "Happy HomesFlora",
-    location: "Thuvairiman",
-    bhk: "2 BHK, 3 BHK & 4 BHK",
-    image: buildingimage,
-  },
-  {
-    id: 2,
-    name: "Happy HomesElite City",
-    location: "Surya Nagar",
-    bhk: "2 BHK, 3 BHK, 4 BHK & 5 BHK",
-    image: buildingimage1,
-  },
-  {
-    id: 3,
-    name: "Happy HomesOscar City",
-    location: "Umachikulam",
-    bhk: "1 BHK, 2 BHK, 3 BHK, 4 BHK & 5 BHK",
-    image: buildingimage2,
-  },
-];
+  const projects = [
+    {
+      id: 1,
+      name: "Surya Garden -1",
+      location: "ParashakthiNagar",
+      bhk: "2 BHK, 3 BHK & 4 BHK",
+      image: buildingimage,
+    },
+    {
+      id: 2,
+      name: "Surya Garden -2",
+      location: "Thiruparankundram",
+      bhk: "2 BHK, 3 BHK",
+      image: buildingimage1,
+    },
+    {
+      id: 3,
+      name: "Surya Garden -3",
+      location: "Kamarajar Nagar",
+      bhk: "1 BHK, 2 BHK, 3 Plot - 3A, 3B",
+      image: buildingimage2,
+    },
+    {
+      id: 4,
+      name: "Surya Garden -4",
+      location: "Thillai Nagar",
+      bhk: "1 BHK",
+      image: buildingimage1,
+    },
+    {
+      id: 5,
+      name: "Surya Garden -5",
+      location: "Karisalkulam",
+      bhk: "Plot",
+      image: buildingimage,
+    },
+    {
+      id: 6,
+      name: "D-mart",
+      location: "D-Mart",
+      bhk: " 3 BHK",
+      image: buildingimage2,
+    }
+  ];
 
-const coimbatoreProjects = [
-  {
-    id: 4,
-    name: "Happy HomesTwin Tower",
-    location: "Surya Nagar",
-    bhk: "1 BHK, 2 BHK, 3 BHK Apartments",
-    image: buildingimage,
-  },
-  {
-    id: 5,
-    name: "Happy HomesGreen City",
-    location: "Avaniyapuram",
-    bhk: "2 BHK & 3 BHK",
-    image: buildingimage2,
-  },
-  {
-    id: 6,
-    name: "Happy HomesRiver City",
-    location: "Thuvairiman",
-    bhk: "Land & Plot",
-    image: buildingimage1,
-  },
-];
+// const coimbatoreProjects = [
+//   {
+//     id: 4,
+//     name: "Happy HomesTwin Tower",
+//     location: "Surya Nagar",
+//     bhk: "1 BHK, 2 BHK, 3 BHK Apartments",
+//     image: buildingimage,
+//   },
+//   {
+//     id: 5,
+//     name: "Happy HomesGreen City",
+//     location: "Avaniyapuram",
+//     bhk: "2 BHK & 3 BHK",
+//     image: buildingimage2,
+//   },
+//   {
+//     id: 6,
+//     name: "Happy HomesRiver City",
+//     location: "Thuvairiman",
+//     bhk: "Land & Plot",
+//     image: buildingimage1,
+//   },
+// ];
 
 const cards = [
     {
@@ -379,11 +400,11 @@ const Home = () => {
 
   const [showPopup, setShowPopup] = useState(false);
   // const [showEnquiryForm, setShowEnquiryForm] = useState(false);
-  const [activeTab, setActiveTab] = useState("Madurai");
+  // const [activeTab, setActiveTab] = useState("Madurai");
 
   // const maduraiProjects = ["Villa A", "Villa B"];
   // const coimbatoreProjects = ["Apartment X", "Apartment Y"];
-  const projects = activeTab === "Madurai" ? maduraiProjects : coimbatoreProjects;
+  // const projects = activeTab === "Madurai" ? maduraiProjects : coimbatoreProjects;
  // Show popup automatically after short delay
   useEffect(() => {
     const timer = setTimeout(() => setShowPopup(true), 500);
@@ -533,7 +554,7 @@ const Home = () => {
       </div>
     </section> */}
 
-   <DropdownAccordion />
+   {/* <DropdownAccordion /> */}
 
        <section className="stats-section">
       <div className="stats-container">
@@ -556,7 +577,7 @@ const Home = () => {
         Exclusive Ongoing Projects Of Happy HomesBest Builders In Madurai
       </h2>
 
-      <div className="tabs">
+      {/* <div className="tabs">
         <button
           className={`tab-btn ${activeTab === "Madurai" ? "active" : ""}`}
           onClick={() => setActiveTab("Madurai")}
@@ -569,7 +590,7 @@ const Home = () => {
         >
           Coimbatore
         </button>
-      </div>
+      </div> */}
 
       <div className="projects-grid">
         {projects.map((p) => (
@@ -598,10 +619,10 @@ const Home = () => {
 
 {/* Card Section End */}
 
-<DropdownAccordion />
+{/* <DropdownAccordion /> */}
 <ImageCarousel />
 {/* <PopupForm /> */}
-<DropdownAccordion />
+{/* <DropdownAccordion /> */}
 
 
 {/* Why Choose Us */}
@@ -623,7 +644,7 @@ const Home = () => {
             Since 1993, we have devoted 30 years to excellence, becoming one of
             the{" "}
             <a
-              href="https://jayabharath.com/enquire-now-jayabharath-homes/"
+              href="https://hhoo.com/enquire-now-happy-homes/"
               target="_blank"
               rel="noreferrer"
             >
@@ -695,7 +716,7 @@ const Home = () => {
 <GallerySection />
 <Testimonial />
 
-<LocationAccordion />
+{/* <LocationAccordion /> */}
 
 <MapSection />
 

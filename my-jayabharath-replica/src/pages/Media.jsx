@@ -1,5 +1,6 @@
 import React from 'react';
 import './Media.css';
+import headerBg from '../asset/MediaBG.jpeg'
 
 const Media = () => {
   const mediaItems = [
@@ -43,12 +44,14 @@ const Media = () => {
 
   return (
     <div className="media-page">
-      <div className="page-header">
+        <div className="page-header"
+        style={{ backgroundImage: `url(${headerBg})` }}
+      >
         <div className="container">
           <h1>Media</h1>
           <p>News, Press Releases, and Updates</p>
         </div>
-      </div>
+        </div>
 
       <div className="container">
         <section className="media-content">

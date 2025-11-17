@@ -37,35 +37,35 @@ const Footer = () => {
           <ul>
             <li>
               <a href="https://jayabharath.com/jayabharath-elanza-apartments-in-madurai/">
-                Happy HomesElanza
+                Surya Garden -1
               </a>
             </li>
             <li>
               <a href="https://jayabharath.com/jayabharath-twin-tower-best-apartments-in-madurai/">
-                Happy HomesTwin Tower
+                Surya Garden -2
               </a>
             </li>
             <li>
               <a href="https://jayabharath.com/oscar-city-umachikulam/">
-                Happy HomesOscar City
+                Surya Garden -3
               </a>
             </li>
             <li>
               <a href="https://jayabharath.com/jayabharath-river-city/">
-                Happy HomesRiver City
+                Surya Garden -4
               </a>
             </li>
             <li>
               <a href="https://jayabharath.com/jayabharath-green-city/">
-                Happy HomesGreen City
+                Surya Garden -5
               </a>
             </li>
             <li>
               <a href="https://jayabharath.com/builders-in-coimbatore-jayabharath-yogamudhra/">
-                Happy HomesYogamudra
+               D-Mart
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="https://jayabharath.com/jayabharath-elite-city/">
                 Happy HomesElite City
               </a>
@@ -74,7 +74,7 @@ const Footer = () => {
               <a href="https://jayabharath.com/flora-gated-community-villas-in-madurai/">
                 Happy HomesFlora
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
 
@@ -89,16 +89,16 @@ const Footer = () => {
             Madurai, Tamil Nadu 625020 <br />
             India
             <br />
-            <a href="tel:+919994422222">📞 +91 99944 xxxxx</a> <br />
+            <a href="tel:+916385847074">📞 +91 63858 47074</a> <br />
             <a href="mailto:info@HappyHomes.com">✉️ info@HappyHomes.com</a>
           </address>
 
           <h4>Project Locations</h4>
           <div className="locations">
             <a href="https://jayabharath.com/">📍 Madurai</a>
-            <a href="https://jayabharath.com/builders-in-coimbatore-jayabharath-yogamudhra/">
+            {/* <a href="https://jayabharath.com/builders-in-coimbatore-jayabharath-yogamudhra/">
               📍 Coimbatore
-            </a>
+            </a> */}
           </div>
         </div>
 

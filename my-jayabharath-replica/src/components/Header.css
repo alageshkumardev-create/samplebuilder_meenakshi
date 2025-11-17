@@ -377,3 +377,68 @@
   }
 }
 
+
+
+ /* Keep ALL your existing CSS… but REPLACE the below parts */
+
+/* REMOVE hover behavior – keep dropdown visible only when .show is active */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  min-width: 240px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 22px 45px rgba(11, 20, 51, 0.15);
+  border: 1px solid rgba(11, 20, 51, 0.08);
+  padding: 1rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 2000;
+}
+
+/* Open dropdown (click only) */
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Arrow rotation */
+.dropdown.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* Prevent dropdown closing when moving mouse */
+.dropdown:hover .dropdown-menu {
+  visibility: visible;
+}
+
+/* Submenu is static for now */
+.sub-dropdown-menu {
+  display: none;
+}
+
+.sub-dropdown:hover .sub-dropdown-menu {
+  display: block;
+}
+
+/* Mobile behavior stays same (your original code) */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    max-height: 0;
+    overflow: hidden;
+    border-left: 2px solid rgba(11, 20, 51, 0.08);
+    transition: max-height 0.3s ease;
+  }
+
+  .dropdown-menu.show {
+    max-height: 500px;
+  }
+}

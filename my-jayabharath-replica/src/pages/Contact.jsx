@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import EnquiryForm from '../components/EnquiryForm';
 import './Contact.css';
-
+import MapSection from '../components/MapSection';
 const Contact = () => {
   const [showEnquiryForm, setShowEnquiryForm] = useState(false);
   const [contactInfo] = useState({
     address: '123 Main Street, Madurai, Tamil Nadu 625001',
-    phone: '+91 98765 4355210',
+    phone: '+91 63858 47074',
     email: 'hello@happyhomes.com',
     hours: 'Monday - Saturday: 9:00 AM - 6:00 PM'
   });
@@ -56,10 +56,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="map-placeholder">
-                <p>📍 Map Location</p>
-                <p className="map-note">Interactive map will be displayed here</p>
-              </div>
+           
             </div>
 
             <div className="contact-form-section">
@@ -74,6 +71,12 @@ const Contact = () => {
             </div>
           </div>
         </section>
+      <section>
+           <div className="map-placeholder">
+                <p>📍 Map Location</p>
+                < MapSection />
+              </div>
+      </section>
       </div>
 
       {showEnquiryForm && (
