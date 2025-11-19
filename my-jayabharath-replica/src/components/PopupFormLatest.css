@@ -34,6 +34,7 @@
   text-align: center;
   overflow: hidden;
   z-index: 2001;
+  /* top: 100px; */
 }
 
 /* Image animation */
@@ -150,3 +151,11 @@
   height: 16px;
   fill: #fff;
 }
+
+
+@media (max-width: 576px){
+.popup-container {
+  top: 100px;
+} 
+}
+

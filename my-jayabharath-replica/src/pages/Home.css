@@ -370,6 +370,152 @@
 
 /* Statcount End */
 
+/* TimeLine ST */
+/* WRAPPER */
+.timeline-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+/* =========================================================
+   DEFAULT (DESKTOP & TABLET) → HORIZONTAL TIMELINE
+   ========================================================= */
+.timeline-container {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
+    position: relative;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Connector line (horizontal) */
+.connector-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180%;
+  height: 4px;
+  background: #d3d3d3;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* Circle outer border */
+.circle-border {
+  border: 14px solid;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* White inner circle */
+.circle {
+    width: 136px;
+    height: 189px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Icon inside circle */
+.icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+/* Circle text */
+.circle h3 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.circle p {
+  font-size: 10px;
+  margin-top: 5px;
+  color: #666;
+  padding: 10px;
+}
+
+/* Number badge */
+.step-badge {
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  border-radius: 30px;
+}
+
+
+
+/* =========================================================
+   MOBILE ONLY → VERTICAL TIMELINE
+   ========================================================= */
+@media (max-width: 768px) {
+  .timeline-container {
+    flex-direction: column;   /* Vertical layout */
+    gap: 90px;
+  }
+
+  .connector-line {
+    position: absolute;
+    width: 4px;
+    height: 160%;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%);
+    background: #d3d3d3;
+  }
+
+  .step-badge {
+    position: absolute;
+    top: 50%;
+    right: 135px;
+    transform: translateY(-50%);
+  }
+
+  /* Alternate labels left-right */
+  .timeline-item:nth-child(even) .step-badge {
+    right: auto;
+    left: 135px;
+  }
+}
+@media (max-width: 576px) {
+  
+
+  .step-badge {
+
+    right: -3px;
+
+  }
+
+  /* Alternate labels left-right */
+  .timeline-item:nth-child(even) .step-badge {
+    left: -4px;
+  }
+}
+
+
+
+
+
+/* TimeLine END */
+
 /* PCARDST */
 .projects-section {
   text-align: center;
@@ -432,7 +578,7 @@
 .project-image {
   width: 100%;
   height: 180px;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .project-content {
@@ -943,6 +1089,10 @@
   .section-subtitle {
     margin-bottom: 2.4rem;
   }
+
+.project-image{
+  height: 340px !important;
+}
 
   .projects-grid {
     grid-template-columns: 1fr;
