@@ -1,5 +1,6 @@
 import React from 'react';
 import './Testimonials.css';
+import headerBg from '../asset/MediaBG.jpeg'
 
 const Testimonials = () => {
   const testimonials = [
@@ -55,8 +56,9 @@ const Testimonials = () => {
 
   return (
     <div className="testimonials-page">
-      <div className="page-header">
-        <div className="container">
+     <div className="services-header" style={{ backgroundImage: `url(${headerBg})` }}>
+          <div className="services-header-overlay"></div>
+         <div className="services-header-left">
           <h1>Testimonials</h1>
           <p>What Our Customers Say About Us</p>
         </div>

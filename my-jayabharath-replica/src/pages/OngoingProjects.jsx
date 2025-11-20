@@ -383,8 +383,9 @@ const OngoingProjects = () => {
 
   return (
     <div className="ongoing-projects-page">
-      <div className="page-header" style={{ backgroundImage: `url(${headerBg})` }}>
-        <div className="container">
+       <div className="services-header" style={{ backgroundImage: `url(${headerBg})` }}>
+            <div className="services-header-overlay"></div>
+           <div className="services-header-left">
           <h1>Ongoing Projects</h1>
           <p>Explore Our Current Developments</p>
         </div>

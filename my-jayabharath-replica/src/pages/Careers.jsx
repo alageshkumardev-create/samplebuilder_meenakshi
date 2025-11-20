@@ -50,8 +50,9 @@ const Careers = () => {
 
   return (
     <div className="careers-page">
-      <div className="page-header" style={{ backgroundImage: `url(${headerBg})` }}>
-        <div className="container">
+      <div className="services-header" style={{ backgroundImage: `url(${headerBg})` }}>
+         <div className="services-header-overlay"></div>
+        <div className="services-header-left">
           <h1>Careers</h1>
           <p>Join Our Team and Build the Future</p>
         </div>

@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './AboutUs.css';
+import headerBg from '../asset/MediaBG.jpeg'
 
 const AboutUs = () => {
   return (
     <div className="about-us-page">
-      <div className="page-header">
-        <div className="container">
+     <div className="services-header" style={{ backgroundImage: `url(${headerBg})` }}>
+                <div className="services-header-overlay"></div>
+               <div className="services-header-left">
           <h1>About Happy Homes</h1>
           <p>Best Builders in Madurai Since 1993</p>
         </div>

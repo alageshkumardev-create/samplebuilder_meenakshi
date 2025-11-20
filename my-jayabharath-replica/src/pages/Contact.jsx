@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import EnquiryForm from '../components/EnquiryForm';
 import './Contact.css';
 import MapSection from '../components/MapSection';
+   import headerBg from '../asset/MediaBG.jpeg'
 const Contact = () => {
   const [showEnquiryForm, setShowEnquiryForm] = useState(false);
   const [contactInfo] = useState({
@@ -13,8 +14,10 @@ const Contact = () => {
 
   return (
     <div className="contact-page">
-      <div className="page-header">
-        <div className="container">
+        
+           <div className="services-header" style={{ backgroundImage: `url(${headerBg})` }}>
+                      <div className="services-header-overlay"></div>
+                     <div className="services-header-left">
           <h1>Contact Us</h1>
           <p>Get in Touch with Happy Homes</p>
         </div>

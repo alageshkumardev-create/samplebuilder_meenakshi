@@ -44,10 +44,9 @@ const Media = () => {
 
   return (
     <div className="media-page">
-        <div className="page-header"
-        style={{ backgroundImage: `url(${headerBg})` }}
-      >
-        <div className="container">
+          <div className="services-header" style={{ backgroundImage: `url(${headerBg})` }}>
+               <div className="services-header-overlay"></div>
+              <div className="services-header-left">
           <h1>Media</h1>
           <p>News, Press Releases, and Updates</p>
         </div>

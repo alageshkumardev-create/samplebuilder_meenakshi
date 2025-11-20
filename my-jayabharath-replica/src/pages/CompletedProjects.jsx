@@ -1,6 +1,8 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
 import './CompletedProjects.css';
+ import headerBg from '../asset/MediaBG.jpeg'
+        
 
 const CompletedProjects = () => {
   const completedProjects = [
@@ -38,8 +40,9 @@ const CompletedProjects = () => {
 
   return (
     <div className="completed-projects-page">
-      <div className="page-header">
-        <div className="container">
+         <div className="services-header" style={{ backgroundImage: `url(${headerBg})` }}>
+              <div className="services-header-overlay"></div>
+             <div className="services-header-left">
           <h1>Completed Projects</h1>
           <p>Our Successfully Delivered Projects</p>
         </div>

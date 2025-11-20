@@ -1,5 +1,7 @@
 import React from 'react';
 import './Leadership.css';
+ import headerBg from '../asset/MediaBG.jpeg'
+          
 
 const Leadership = () => {
   const teamMembers = [
@@ -31,8 +33,9 @@ const Leadership = () => {
 
   return (
     <div className="leadership-page">
-      <div className="page-header">
-        <div className="container">
+       <div className="services-header" style={{ backgroundImage: `url(${headerBg})` }}>
+                      <div className="services-header-overlay"></div>
+                     <div className="services-header-left">
           <h1>Leadership Team</h1>
           <p>Experienced Professionals Leading the Way</p>
         </div>

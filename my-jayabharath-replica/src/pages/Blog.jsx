@@ -1,5 +1,6 @@
 import React from 'react';
 import './Blog.css';
+import headerBg from '../asset/MediaBG.jpeg'
 
 const Blog = () => {
   const blogPosts = [
@@ -49,8 +50,9 @@ const Blog = () => {
 
   return (
     <div className="blog-page">
-      <div className="page-header">
-        <div className="container">
+         <div className="services-header" style={{ backgroundImage: `url(${headerBg})` }}>
+              <div className="services-header-overlay"></div>
+             <div className="services-header-left">
           <h1>Blog</h1>
           <p>Insights, Tips, and Updates from Happy Homes</p>
         </div>

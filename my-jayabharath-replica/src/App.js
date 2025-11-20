@@ -15,7 +15,7 @@ import Blog from './pages/Blog';
 import OngoingProjects from './pages/OngoingProjects';
 import ProjectDetail from './pages/ProjectDetail';
 import Media from './pages/Media';
-import Investors from './pages/Investors';
+// import Services from './pages/Services';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 
@@ -36,7 +36,7 @@ function App() {
           <Route path="/ongoing-projects" element={<OngoingProjects />} />
           <Route path="/project/:id" element={<ProjectDetail />} />
           <Route path="/media" element={<Media />} />
-          <Route path="/investors" element={<Investors />} />
+          {/* <Route path="/services" element={<Services />} /> */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<Careers />} />
         </Routes>

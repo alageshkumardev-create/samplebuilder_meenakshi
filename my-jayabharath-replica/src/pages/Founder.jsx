@@ -1,11 +1,14 @@
 import React from 'react';
 import './Founder.css';
+import headerBg from '../asset/MediaBG.jpeg'
+          
 
 const Founder = () => {
   return (
     <div className="founder-page">
-      <div className="page-header">
-        <div className="container">
+       <div className="services-header" style={{ backgroundImage: `url(${headerBg})` }}>
+                      <div className="services-header-overlay"></div>
+                     <div className="services-header-left">
           <h1>Founder and Managing Director</h1>
           <p>Visionary Leadership Since 1993</p>
         </div>
